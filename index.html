@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Terrazas Rooftop</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <style data-purpose="base-styles">
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAFA;
+            /* Light background for most sections */
+            color: #111827;
+            /* Default text color */
+            overflow-x: hidden;
+        }
+
+        .bg-dark-theme {
+            background-color: #13141A;
+            /* Specific dark background from reference */
+        }
+
+        /* Hamburger Menu Animation */
+        .hamburger-btn {
+            width: 24px;
+            height: 16px;
+            position: relative;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hamburger-btn span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .hamburger-btn.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .hamburger-btn.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-btn.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="antialiased selection:bg-gray-800 selection:text-white">
+    <!-- BEGIN: MainHeader -->
+    <header
+        class="fixed md:absolute top-0 left-0 w-full z-50 py-4 md:py-6 lg:px-16 flex justify-between items-center text-white px-6 bg-[#13141A]/60 backdrop-blur-md md:bg-transparent md:backdrop-blur-none border-b border-white/5 md:border-b-0"
+        data-purpose="site-header">
+        <div class="text-xl font-semibold tracking-tight z-50">
+            Terrazas Rooftop
+        </div>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-8 text-sm font-medium">
+            <a class="hover:text-gray-300 transition-colors" href="#">Nosotros</a>
+            <a class="hover:text-gray-300 transition-colors" href="#">Servicios</a>
+            <a class="hover:text-gray-300 transition-colors" href="#">Proyectos</a>
+            <a class="hover:text-gray-300 transition-colors" href="#">FAQs</a>
+            <a class="hover:text-gray-300 transition-colors" href="#">Contacto</a>
+        </nav>
+        <!-- Hamburger Button -->
+        <button id="menu-btn" class="md:hidden flex items-center p-2 z-50 focus:outline-none" aria-label="Menu">
+            <div class="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#13141A]/95 backdrop-blur-lg z-40 flex flex-col justify-center items-center space-y-8 text-xl font-medium text-white transition-all duration-300 translate-x-full md:hidden">
+        <a class="hover:text-gray-300 transition-colors mobile-link" href="#">Nosotros</a>
+        <a class="hover:text-gray-300 transition-colors mobile-link" href="#">Servicios</a>
+        <a class="hover:text-gray-300 transition-colors mobile-link" href="#">Proyectos</a>
+        <a class="hover:text-gray-300 transition-colors mobile-link" href="#">FAQs</a>
+        <a class="hover:text-gray-300 transition-colors mobile-link" href="#">Contacto</a>
+    </div>
+    <!-- END: MainHeader -->
+    <main>
+        <!-- BEGIN: HeroSection -->
+        <!-- BEGIN: HeroSection -->
+        <section class="relative w-full min-h-screen bg-dark-theme flex flex-col" data-purpose="hero-section">
+            <!-- Background Image (Background on mobile, right side on desktop) -->
+            <div class="absolute inset-0 w-full h-full lg:left-auto lg:w-1/2 z-0">
+                <img alt="Lujo Terraza al atardecer" class="w-full h-full object-cover" src="./img/portada.avif" />
+
+                <!-- Dark overlay for readability on mobile only -->
+                <div class="absolute inset-0 bg-black/60 lg:hidden"></div>
+
+                <!-- Info Box -->
+                <div
+                    class="absolute bottom-8 right-6 lg:bottom-12 lg:right-12 bg-black/60 backdrop-blur-md text-white p-4 max-w-[240px] rounded-lg border border-white/10 text-xs z-20">
+                    <p>Más del 60% de las terrazas planas en áreas urbanas están funcionalmente desaprovechadas o sin
+                        uso.</p>
+                </div>
+            </div>
+
+            <!-- Text Content -->
+            <div
+                class="relative z-10 w-full mt-24 flex-grow flex flex-col justify-center px-6 lg:px-16 pt-32 pb-16 lg:py-32 text-white lg:w-1/2">
+                <h1 class="text-4xl lg:text-7xl font-semibold leading-tight tracking-tight mb-8 max-w-xl">
+                    Transformamos Espacios en Oasis Urbanos
+                </h1>
+                <p class="text-gray-400 mt-16 text-base lg:text-lg mb-10 max-w-md">
+                    Transformamos terrazas vacías en espacios recreativos de alta calidad, combinando diseño, tecnología
+                    y materiales premium.
+                </p>
+                <div>
+                    <a class="relative mt-16 inline-flex items-center gap-4 bg-[#222222] border border-gray-700 px-6 py-3 rounded-full text-sm font-medium overflow-hidden group transition-all duration-300"
+                        href="#">
+                        <!-- Círculo que se expande -->
+                        <span
+                            class="absolute right-6 top-1/2 -translate-y-1/2 w-6 h-6 bg-white rounded-full transition-transform duration-500 ease-out group-hover:scale-[30] z-0 origin-center"></span>
+
+                        <!-- Texto -->
+                        <span
+                            class="relative z-10 text-white group-hover:text-black transition-colors duration-300 font-semibold">
+                            Cotizar sin costo
+                        </span>
+
+                        <!-- Icono -->
+                        <span class="relative z-10 flex items-center justify-center w-6 h-6 text-black">
+                            <svg class="transition-transform duration-500 -rotate-45 group-hover:rotate-0" fill="none"
+                                height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- END: HeroSection -->
+        <!-- BEGIN: AboutSection -->
+        <section class="py-24 lg:px-16 bg-white px-6" data-purpose="about-section">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col mb-16 max-w-4xl">
+                    <div class="mb-8">
+                        <span
+                            class="inline-block bg-[#222222] text-white text-sm font-medium px-4 py-1.5 rounded-full mb-6">Acerca
+                            de Nosotros</span>
+                        <h2 class="text-4xl lg:text-6xl  tracking-tight text-gray-900 leading-[1.1] font-normal">
+                            Ingeniería estructural<br class="hidden md:block" /> de vanguardia.
+                        </h2>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 text-lg lg:text-xl leading-relaxed">
+                            Somos una empresa con más de 20 años de experiencia diseñando y ejecutando obras a medida.
+                            Nuestro compromiso es ofrecer un servicio integral y personalizado, abarcando desde el
+                            diseño hasta la ejecución completa del proyecto. <br />
+                            Con "TERRAZAS ROOFTOP", volcamos toda nuestra trayectoria para transformar espacios sin uso
+                            en activos valiosos, garantizando no solo un diseño excepcional, sino una construcción de
+                            máxima calidad y durabilidad.
+                        </p>
+                    </div>
+                </div>
+                <!-- Image Slider -->
+                <div class="relative w-full lg:w-[100vw] lg:relative lg:left-1/2 lg:-translate-x-1/2 mt-12"
+                    id="gallery-container">
+                    <style>
+                        .hide-scrollbar::-webkit-scrollbar {
+                            display: none;
+                        }
+
+                        .hide-scrollbar {
+                            -ms-overflow-style: none;
+                            scrollbar-width: none;
+                        }
+                    </style>
+                    <div id="project-slider"
+                        class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 hide-scrollbar">
+                        <div
+                            class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
+                            <img alt="Proyecto 1"
+                                class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                                src="./img/slide01.avif" />
+                        </div>
+                        <div
+                            class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
+                            <img alt="Proyecto 2"
+                                class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                                src="./img/slide02.avif" />
+                        </div>
+                        <div
+                            class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
+                            <img alt="Proyecto 3"
+                                class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                                src="./img/slide03.avif" />
+                        </div>
+                        <div
+                            class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
+                            <img alt="Proyecto 4"
+                                class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                                src="./img/slide04.avif" />
+                        </div>
+                        <div
+                            class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
+                            <img alt="Proyecto 5"
+                                class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                                src="./img/slide05.avif" />
+                        </div>
+                        <div
+                            class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
+                            <img alt="Proyecto 6"
+                                class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                                src="./img/slide06.avif" />
+                        </div>
+                    </div>
+
+                    <!-- Mobile Dots Indicator -->
+                    <div class="flex justify-center gap-2 mt-4 md:hidden" id="slider-dots">
+                        <button class="w-2.5 h-2.5 rounded-full bg-gray-800 transition-all duration-300 dot-btn"
+                            aria-label="Go to slide 1"></button>
+                        <button class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                            aria-label="Go to slide 2"></button>
+                        <button class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                            aria-label="Go to slide 3"></button>
+                        <button class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                            aria-label="Go to slide 4"></button>
+                        <button class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                            aria-label="Go to slide 5"></button>
+                        <button class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                            aria-label="Go to slide 6"></button>
+                    </div>
+                </div>
+
+                <!-- Auto-sliding Logic -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const slider = document.getElementById('project-slider');
+                        const dots = document.querySelectorAll('.dot-btn');
+                        let items = document.querySelectorAll('.slider-item');
+                        let currentIndex = 0;
+                        let autoSlideInterval;
+                        let animationFrameId;
+
+                        // Clone items for infinite scroll
+                        const originalItemsCount = items.length;
+                        items.forEach(item => {
+                            const clone = item.cloneNode(true);
+                            slider.appendChild(clone);
+                        });
+                        items = document.querySelectorAll('.slider-item');
+
+                        const updateDots = (index) => {
+                            const normalizedIndex = index % originalItemsCount;
+                            dots.forEach((dot, i) => {
+                                if (i === normalizedIndex) {
+                                    dot.classList.remove('bg-gray-300');
+                                    dot.classList.add('bg-gray-800');
+                                } else {
+                                    dot.classList.remove('bg-gray-800');
+                                    dot.classList.add('bg-gray-300');
+                                }
+                            });
+                        };
+
+                        const scrollToSlide = (index) => {
+                            if (!items[index]) return;
+                            const scrollLeft = items[index].offsetLeft - slider.offsetLeft;
+                            slider.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+                            updateDots(index);
+                        };
+
+                        const nextSlide = () => {
+                            currentIndex++;
+                            if (currentIndex >= items.length) {
+                                currentIndex = 0;
+                                slider.scrollTo({ left: 0, behavior: 'instant' });
+                                return;
+                            }
+                            scrollToSlide(currentIndex);
+                        };
+
+                        const startAutoSlide = () => {
+                            stopAutoSlide();
+                            if (window.innerWidth >= 1024) {
+                                slider.classList.remove('snap-mandatory', 'snap-x', 'scroll-smooth');
+                                const playScroll = () => {
+                                    if (!isDown) {
+                                        slider.scrollLeft += 1;
+                                        const resetPoint = items[originalItemsCount].offsetLeft - slider.offsetLeft;
+                                        if (slider.scrollLeft >= resetPoint) {
+                                            slider.scrollLeft -= resetPoint;
+                                        }
+                                    }
+                                    animationFrameId = requestAnimationFrame(playScroll);
+                                };
+                                animationFrameId = requestAnimationFrame(playScroll);
+                            } else {
+                                slider.classList.add('snap-mandatory', 'snap-x', 'scroll-smooth');
+                                autoSlideInterval = setInterval(nextSlide, 3500);
+                            }
+                        };
+
+                        const stopAutoSlide = () => {
+                            if (autoSlideInterval) clearInterval(autoSlideInterval);
+                            if (animationFrameId) cancelAnimationFrame(animationFrameId);
+                        };
+
+                        window.addEventListener('resize', () => {
+                            startAutoSlide();
+                        });
+
+                        dots.forEach((dot, i) => {
+                            dot.addEventListener('click', () => {
+                                currentIndex = i;
+                                scrollToSlide(currentIndex);
+                                startAutoSlide();
+                            });
+                        });
+
+                        slider.addEventListener('scroll', () => {
+                            if (window.innerWidth >= 1024) return;
+                            const scrollPosition = slider.scrollLeft;
+                            const itemWidth = items[0].offsetWidth + 16;
+                            const newIndex = Math.round(scrollPosition / itemWidth);
+                            if (newIndex !== currentIndex && newIndex >= 0 && newIndex < items.length) {
+                                currentIndex = newIndex;
+                                updateDots(currentIndex);
+                            }
+                        });
+
+                        let isDown = false;
+                        let startX;
+                        let scrollLeft;
+
+                        slider.style.cursor = 'grab';
+
+                        slider.addEventListener('mousedown', (e) => {
+                            isDown = true;
+                            slider.style.cursor = 'grabbing';
+                            slider.classList.remove('scroll-smooth', 'snap-x', 'snap-mandatory');
+                            startX = e.pageX - slider.offsetLeft;
+                            scrollLeft = slider.scrollLeft;
+                            stopAutoSlide();
+                        });
+
+                        slider.addEventListener('mouseleave', () => {
+                            if (isDown) {
+                                isDown = false;
+                                slider.style.cursor = 'grab';
+                                if (window.innerWidth < 1024) {
+                                    slider.classList.add('scroll-smooth', 'snap-x', 'snap-mandatory');
+                                }
+                            }
+                            startAutoSlide();
+                        });
+
+                        slider.addEventListener('mouseup', () => {
+                            isDown = false;
+                            slider.style.cursor = 'grab';
+                            if (window.innerWidth < 1024) {
+                                slider.classList.add('scroll-smooth', 'snap-x', 'snap-mandatory');
+                            }
+                            startAutoSlide();
+                        });
+
+                        slider.addEventListener('mousemove', (e) => {
+                            if (!isDown) return;
+                            e.preventDefault();
+                            const x = e.pageX - slider.offsetLeft;
+                            const walk = (x - startX) * 2;
+                            slider.scrollLeft = scrollLeft - walk;
+                        });
+
+                        const images = slider.querySelectorAll('img');
+                        images.forEach(img => {
+                            img.addEventListener('dragstart', (e) => e.preventDefault());
+                        });
+
+                        slider.addEventListener('touchstart', stopAutoSlide, { passive: true });
+                        slider.addEventListener('touchend', startAutoSlide, { passive: true });
+
+                        startAutoSlide();
+                    });
+                </script>
+            </div>
+        </section>
+        <!-- END: AboutSection -->
+        <!-- BEGIN: StatsSection -->
+        <section class="py-16 lg:px-16 bg-white border-t border-gray-100 px-6" data-purpose="statistics-section">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <p class="text-5xl font-light text-gray-900 mb-2 stat-number">20</p>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Años De Experiencia</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Creando relaciones duraderas con nuestros clientes
+                        a través de la honestidad, la transparencia y la excelencia.</p>
+                </div>
+                <div>
+                    <p class="text-5xl font-light text-gray-900 mb-2 stat-number">100%</p>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Solución Integral</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Contamos con personal y equipamiento propio para
+                        cubrir todas las instancias del proyecto, desde el diseño hasta la puesta en marcha.</p>
+                </div>
+                <div>
+                    <p class="text-5xl font-light text-gray-900 mb-2 stat-number">+100</p>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Proyectos Finalizados</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Cada proyecto es un testimonio de nuestra calidad y
+                        dedicación. Experiencia que ahora aplicamos para maximizar el potencial de tu terraza.</p>
+                </div>
+                <div>
+                    <p class="text-5xl font-light text-gray-900 mb-2 stat-number">100%</p>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Satisfacción Garantizada</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Ofrecemos un servicio "llave en mano" sin
+                        sorpresas, garantizando una ejecución profesional de principio a fin.</p>
+                </div>
+            </div>
+        </section>
+        <!-- END: StatsSection -->
+        <!-- BEGIN: ServicesSection -->
+        <section class="pt-12 bg-[#FAFAFA]" data-purpose="services-section">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span
+                        class="inline-block bg-gray-800 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">Servicios</span>
+                    <h2 class="font-semibold tracking-tight text-gray-900 mb-4 text-5xl">Un Proyecto a Tu Medida</h2>
+                    <p class="text-gray-600 text-2xl">Descubrí todo lo que podemos hacer para transformar tu terraza.
+                    </p>
+                </div>
+                <div class="px-8 flex flex-col lg:flex-row gap-16 items-start">
+                    <!-- Left Service Image -->
+                    <div class="w-full lg:w-1/2">
+                        <img alt="Servicio de Cocina en Terraza"
+                            class="w-full rounded-lg shadow-md object-cover aspect-square"
+                            src="./img/proy-decks.avif" />
+                    </div>
+                    <!-- Right Accordion List (Visual representation of state) -->
+                    <div class="w-full lg:w-1/2 flex flex-col gap-2">
+                        <!-- Active Accordion Item -->
+                        <div class="border-b border-gray-200 accordion-item is-active">
+                            <div class="flex justify-between items-center py-4 cursor-pointer accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <!-- Kitchen Icon -->
+                                    <svg class="text-gray-700" fill="none" height="24" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2v20"></path>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    <h3 class="text-lg font-semibold text-gray-900 accordion-title">Cocina</h3>
+                                </div>
+                                <button class="text-gray-400 hover:text-gray-700">
+                                    <svg class="icon-plus hidden" fill="none" height="20" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5v14"></path>
+                                    </svg>
+                                    <svg class="icon-close block" fill="none" height="20" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="accordion-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[1fr]">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-600 pl-10 pr-4 text-sm leading-relaxed pb-6">
+                                        Creamos un espacio cerrado o semicubierto totalmente equipado para ser el
+                                        corazón de
+                                        tu
+                                        terraza. Diseñamos espacios funcionales y modernos que pueden incluir parrilla a
+                                        gas
+                                        o
+                                        carbón, y todo el confort para disfrutar en cualquier época del año.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Inactive Accordion Items -->
+                        <div class="border-b border-gray-200 accordion-item">
+                            <div class="flex justify-between items-center py-5 cursor-pointer accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <svg class="text-gray-700" fill="none" height="24" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <rect height="18" rx="2" width="18" x="3" y="3"></rect>
+                                        <path d="M3 9h18"></path>
+                                        <path d="M9 21V9"></path>
+                                    </svg>
+                                    <h3 class="text-lg font-medium text-gray-900 accordion-title">Decks y Soláriums</h3>
+                                </div>
+                                <button class="text-gray-400 hover:text-gray-700">
+                                    <svg class="icon-plus block" fill="none" height="20" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5v14"></path>
+                                    </svg>
+                                    <svg class="icon-close hidden" fill="none" height="20" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="accordion-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-600 pl-10 pr-4 text-sm leading-relaxed pb-6">
+                                        Creamos la base de tu nuevo espacio con decks de madera natural o WPC de bajo
+                                        mantenimiento. Estas superficies, además de ser resistentes y estéticas, definen
+                                        las
+                                        áreas de estar y se integran perfectamente con escalones tipo solárium para
+                                        crear
+                                        zonas de relax y descanso.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-200 accordion-item">
+                            <div class="flex justify-between items-center py-5 cursor-pointer accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <svg class="text-gray-700" fill="none" height="24" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 12h20"></path>
+                                        <path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path>
+                                        <path d="M4 6v6"></path>
+                                        <path d="M20 6v6"></path>
+                                        <path d="M12 2v10"></path>
+                                    </svg>
+                                    <h3 class="text-lg font-medium text-gray-900 accordion-title">Hidromasajes y Espejos
+                                        de Agua</h3>
+                                </div>
+                                <button class="text-gray-400 hover:text-gray-700">
+                                    <svg class="icon-plus block" fill="none" height="20" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5v14"></path>
+                                    </svg>
+                                    <svg class="icon-close hidden" fill="none" height="20" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="accordion-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-600 pl-10 pr-4 text-sm leading-relaxed pb-6">
+                                        Añadimos un toque de lujo y serenidad con la instalación de hidromasajes o
+                                        espejos
+                                        de agua. Estos elementos se convierten en el punto focal del diseño, aportando
+                                        un
+                                        sonido relajante y una experiencia de spa privado en tu propia casa.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-200 accordion-item">
+                            <div class="flex justify-between items-center py-5 cursor-pointer accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <svg class="text-gray-700" fill="none" height="24" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 21h18"></path>
+                                        <path d="M3 7v14"></path>
+                                        <path d="M21 7v14"></path>
+                                        <path d="M3 7l9-5 9 5"></path>
+                                    </svg>
+                                    <h3 class="text-lg font-medium text-gray-900 accordion-title">Pérgolas y
+                                        Cerramientos</h3>
+                                </div>
+                                <button class="text-gray-400 hover:text-gray-700">
+                                    <svg class="icon-plus block" fill="none" height="20" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5v14"></path>
+                                    </svg>
+                                    <svg class="icon-close hidden" fill="none" height="20" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="accordion-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-600 pl-10 pr-4 text-sm leading-relaxed pb-6">
+                                        Extendemos la funcionalidad de tu terraza para que puedas disfrutarla todo el
+                                        año.
+                                        Diseñamos e instalamos pérgolas de diseño para generar sombra y confort, junto a
+                                        cerramientos vidriados panorámicos que protegen del viento y la lluvia sin
+                                        sacrificar las vistas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-200 accordion-item">
+                            <div class="flex justify-between items-center py-5 cursor-pointer accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <svg class="text-gray-700" fill="none" height="24" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <path d="M12 2v2"></path>
+                                        <path d="M12 20v2"></path>
+                                        <path d="m4.93 4.93 1.41 1.41"></path>
+                                        <path d="m17.66 17.66 1.41 1.41"></path>
+                                        <path d="M2 12h2"></path>
+                                        <path d="M20 12h2"></path>
+                                        <path d="m6.34 17.66-1.41 1.41"></path>
+                                        <path d="m19.07 4.93-1.41 1.41"></path>
+                                    </svg>
+                                    <h3 class="text-lg font-medium text-gray-900 accordion-title">Energía Solar y
+                                        Sostenibilidad</h3>
+                                </div>
+                                <button class="text-gray-400 hover:text-gray-700">
+                                    <svg class="icon-plus block" fill="none" height="20" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5v14"></path>
+                                    </svg>
+                                    <svg class="icon-close hidden" fill="none" height="20" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="accordion-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-600 pl-10 pr-4 text-sm leading-relaxed pb-6">
+                                        Transformamos tu terraza en una fuente de energía limpia y renovable. Realizamos
+                                        la
+                                        instalación de paneles solares que te permiten reducir tu consumo eléctrico y
+                                        contribuir al medio ambiente. Una solución inteligente que añade valor y
+                                        eficiencia
+                                        energética a tu propiedad.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-200 accordion-item">
+                            <div class="flex justify-between items-center py-5 cursor-pointer accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <svg class="text-gray-700" fill="none" height="24" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <rect height="14" rx="2" width="20" x="2" y="3"></rect>
+                                        <line x1="8" x2="16" y1="21" y2="21"></line>
+                                        <line x1="12" x2="12" y1="17" y2="21"></line>
+                                    </svg>
+                                    <h3 class="text-lg font-medium text-gray-900 accordion-title">Tecnología y
+                                        Entretenimiento</h3>
+                                </div>
+                                <button class="text-gray-400 hover:text-gray-700">
+                                    <svg class="icon-plus block" fill="none" height="20" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5v14"></path>
+                                    </svg>
+                                    <svg class="icon-close hidden" fill="none" height="20" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="accordion-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-600 pl-10 pr-4 text-sm leading-relaxed pb-6">
+                                        Equipamos tu nuevo espacio con la mejor tecnología para el ocio y el confort.
+                                        Integramos sistemas de sonido con parlantes Bluetooth, proyectores con pantallas
+                                        retráctiles y conexiones para TV o consolas. Controlá el ambiente y la diversión
+                                        desde la comodidad de tu celular.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const accordionItems = document.querySelectorAll('.accordion-item');
+
+                                accordionItems.forEach(item => {
+                                    const header = item.querySelector('.accordion-header');
+                                    header.addEventListener('click', () => {
+                                        // Close all others
+                                        accordionItems.forEach(otherItem => {
+                                            if (otherItem !== item && otherItem.classList.contains('is-active')) {
+                                                otherItem.classList.remove('is-active');
+                                                const otherContent = otherItem.querySelector('.accordion-content');
+                                                const otherTitle = otherItem.querySelector('.accordion-title');
+                                                const otherPlus = otherItem.querySelector('.icon-plus');
+                                                const otherClose = otherItem.querySelector('.icon-close');
+
+                                                otherContent.classList.remove('grid-rows-[1fr]');
+                                                otherContent.classList.add('grid-rows-[0fr]');
+                                                otherTitle.classList.remove('font-semibold');
+                                                otherTitle.classList.add('font-medium');
+                                                otherPlus.classList.remove('hidden');
+                                                otherPlus.classList.add('block');
+                                                otherClose.classList.remove('block');
+                                                otherClose.classList.add('hidden');
+                                            }
+                                        });
+
+                                        // Toggle current
+                                        item.classList.toggle('is-active');
+                                        const content = item.querySelector('.accordion-content');
+                                        const title = item.querySelector('.accordion-title');
+                                        const plus = item.querySelector('.icon-plus');
+                                        const close = item.querySelector('.icon-close');
+
+                                        if (item.classList.contains('is-active')) {
+                                            content.classList.remove('grid-rows-[0fr]');
+                                            content.classList.add('grid-rows-[1fr]');
+                                            title.classList.remove('font-medium');
+                                            title.classList.add('font-semibold');
+                                            plus.classList.remove('block');
+                                            plus.classList.add('hidden');
+                                            close.classList.remove('hidden');
+                                            close.classList.add('block');
+                                        } else {
+                                            content.classList.remove('grid-rows-[1fr]');
+                                            content.classList.add('grid-rows-[0fr]');
+                                            title.classList.remove('font-semibold');
+                                            title.classList.add('font-medium');
+                                            plus.classList.remove('hidden');
+                                            plus.classList.add('block');
+                                            close.classList.remove('block');
+                                            close.classList.add('hidden');
+                                        }
+                                    });
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- BEGIN: StackedCardsSection (Project Showcase & Guarantee) -->
+            <section class="py-24 lg:px-16 bg-[#FAFAFA] px-6" data-purpose="stacked-cards-section">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <span
+                            class="inline-block bg-gray-800 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">Nuestros
+                            Proyectos</span>
+                        <h2 class="font-semibold tracking-tight text-gray-900 mb-4 text-4xl">Visualizá tu Futuro
+                            Espacio.
+                        </h2>
+                        <p class="text-gray-600 text-xl">Así transformamos metros cuadrados sin uso en experiencias de
+                            vida
+                            únicas.
+                        </p>
+                    </div>
+
+                    <!-- Cards Container with gap to allow scrolling -->
+                    <div class="relative flex flex-col gap-[40vh] pb-[10vh]">
+
+                        <!-- Card 1: Project -->
+                        <div
+                            class="stacked-card sticky top-20 bg-[#EEF0F3] rounded-2xl overflow-hidden flex flex-col md:flex-row transform-gpu origin-top shadow-xl">
+                            <div class="w-full md:w-2/5">
+                                <img alt="Rooftop y Relax" class="w-full h-full object-cover"
+                                    src="./img/coment01.avif" />
+                            </div>
+                            <div class="w-full md:w-3/5 px-8 py-4 lg:p-16 flex flex-col justify-center bg-[#EEF0F3]">
+                                <h3 class="text-3xl font-semibold text-gray-900 mb-4">Rooftop y Relax.</h3>
+                                <p class="text-gray-600 mb-8 leading-relaxed text-sm">
+                                    Este concepto de transformación integral combina un área de cocina semicubierta con
+                                    parrilla
+                                    y comedor, junto a un lujoso solárium con deck de madera y piscina. El diseño
+                                    maximiza el
+                                    espacio y crea zonas diferenciadas para el relax y la vida social.
+                                </p>
+                                <div class="border-t border-gray-300 pt-8 mt-auto">
+                                    <p class="text-gray-600 text-sm italic mb-6 relative">
+                                        <span class="absolute -left-4 -top-2 text-2xl text-gray-400 font-serif">"</span>
+                                        Un proyecto llave en mano que no solo multiplica los metros cuadrados
+                                        disfrutables de tu
+                                        hogar, sino que incrementa de forma directa y significativa el valor de reventa
+                                        o
+                                        alquiler de la propiedad.
+                                    </p>
+                                    <div class="flex items-center gap-3">
+                                        <img alt="Usuario" class="w-10 h-10 rounded-full object-cover"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOmJkNK8YwxjRbpLeOCIVlN5xXf94yhJaLgS9_7a6-4iom2RdlTkEC3CYrz4UxpymUTOxjnltCCkFI_moWeC6s-UNU7a2_t2M9p4qsr_DbRI7hvefauDewAj36xMFTmg7wfSdON2RvGcONBEHaTZJ0elhnZ_aFkOn-QidZwWEbXYaiKt-XxFQubqHVtZE4yEQh1LUl-Gz10nOylJFmtjgfWu3b0kgbgTaX-YtwZR7kEea4q9HDLF3UFB9y2arHn-RhGUDJA41jsQIx" />
+                                        <span class="text-xs font-medium text-gray-900">Mano De Melo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Guarantee -->
+                        <div
+                            class="stacked-card sticky top-32 bg-[#111215] rounded-2xl overflow-hidden flex flex-col md:flex-row text-white transform-gpu origin-top shadow-2xl">
+                            <div class="w-full md:w-2/5">
+                                <img alt="Terraza de noche" class="w-full h-full object-cover"
+                                    src="./img/coment02.avif" />
+                            </div>
+                            <div class="w-full md:w-3/5 p-12 lg:p-16 flex flex-col justify-center bg-[#111215]">
+                                <h3 class="text-3xl font-semibold mb-6">Confianza y Profesionalismo:<br />Nuestra
+                                    Garantía.</h3>
+                                <p class="text-gray-400 mb-10 leading-relaxed text-sm">
+                                    Para nosotros, cada proyecto es un compromiso de confianza. Nos enorgullece cumplir
+                                    rigurosamente con los plazos pactados y ofrecer una ejecución profesional de
+                                    principio a
+                                    fin, asegurando no solo un resultado estético superior, sino también la tranquilidad
+                                    de
+                                    nuestros clientes.
+                                </p>
+                                <div class="border-t border-gray-800 pt-8 mt-auto">
+                                    <p class="text-gray-300 text-sm italic mb-6 relative">
+                                        <span class="absolute -left-4 -top-2 text-3xl text-gray-700 font-serif">"</span>
+                                        "Estoy feliz de haber trabajado con el equipo de Mano Melo. No solo cumplieron
+                                        con los plazos del contrato, sino que su profesionalismo es
+                                        destacable.
+                                        Disfrutamos del nuevo espacio junto a familia y amigos que están tan encantados
+                                        como
+                                        nosotros."
+                                    </p>
+                                    <div class="flex items-center gap-3">
+                                        <img alt="Ivan"
+                                            class="w-10 h-10 rounded-full object-cover border border-gray-600"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0h67elq0HdJjGBfGvZ9lBg2-02_ulRHIK3lkJ61aeVWZGOYbwtkeBZajTeR1CILWqErrR1s7oOrqa2EumHOKxMqPIgy0E4GH10YnWRMu5JSW4tr0kYwwe2MDXiq_K-ukMDQ1UPaXpqPbqyiH76Mr4rM689voZ1AY5H45MHsZmermkewpIigamlk020vdIczzLBkSm7P5qxvB9VhpFUW529N353gB8PJPBNKCCHm6P23pBVGyR8cAQlYWwjZlzey45eYGPElrF_WJ7" />
+                                        <span class="text-xs font-medium text-gray-300">Ivan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const stackedCards = document.querySelectorAll('.stacked-card');
+
+                        window.addEventListener('scroll', () => {
+                            window.requestAnimationFrame(() => {
+                                stackedCards.forEach((card, index) => {
+                                    // The last card doesn't scale down
+                                    if (index === stackedCards.length - 1) {
+                                        card.style.transform = 'scale(1)';
+                                        card.style.opacity = 1;
+                                        return;
+                                    }
+
+                                    const nextCard = stackedCards[index + 1];
+                                    const cardRect = card.getBoundingClientRect();
+                                    const nextRect = nextCard.getBoundingClientRect();
+
+                                    // Calculate distance between the tops of the current and next card
+                                    const distance = nextRect.top - cardRect.top;
+
+                                    // Only apply effect if the card has reached its sticky position (around 128px from top, we use a small buffer)
+                                    if (cardRect.top <= 140) {
+                                        // If next card is overlapping or about to overlap
+                                        if (distance > 0 && distance < cardRect.height) {
+                                            const progress = 1 - (distance / cardRect.height);
+                                            // Scale from 1 down to 0.92
+                                            const scale = 1 - (progress * 0.08);
+                                            card.style.transform = `scale(${scale})`;
+                                            // Fade slightly
+                                            card.style.opacity = 1 - (progress * 0.4);
+                                        } else if (distance <= 0) {
+                                            // Completely covered
+                                            card.style.transform = 'scale(0.92)';
+                                            card.style.opacity = 0.6;
+                                        } else {
+                                            // Next card is far away
+                                            card.style.transform = 'scale(1)';
+                                            card.style.opacity = 1;
+                                        }
+                                    } else {
+                                        card.style.transform = 'scale(1)';
+                                        card.style.opacity = 1;
+                                    }
+                                });
+                            });
+                        });
+                    });
+                </script>
+            </section>
+            <!-- END: StackedCardsSection -->
+            <!-- BEGIN: FAQSection -->
+            <section class="py-24 lg:px-16 bg-white px-6" data-purpose="faq-section">
+                <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
+                    <!-- Left Side content -->
+                    <div class="w-full lg:w-1/3">
+                        <span
+                            class="inline-block bg-black text-white text-xs font-semibold px-3 py-1 rounded-full mb-6">Preguntas
+                            Frecuentes</span>
+                        <h2 class="font-semibold tracking-tight text-gray-900 mb-4 leading-tight text-5xl">Resolvemos
+                            tus<br />dudas.</h2>
+                        <p class="text-gray-600 mb-8 text-xl">¿Tenés más consultas? Ponete en<br />contacto con nuestro
+                            equipo.</p>
+                        <a class="relative inline-flex items-center gap-3 bg-gray-100 border border-gray-200 px-5 py-2.5 rounded-full text-sm font-medium overflow-hidden group transition-all duration-300"
+                            href="#">
+                            <!-- Círculo que se expande -->
+                            <span
+                                class="absolute right-[18px] top-1/2 -translate-y-1/2 w-7 h-7 bg-gray-900 rounded-full transition-transform duration-500 ease-out group-hover:scale-[30] z-0 origin-center"></span>
+
+                            <!-- Texto -->
+                            <span
+                                class="relative z-10 text-gray-900 group-hover:text-white transition-colors duration-300 font-semibold">
+                                Contactanos
+                            </span>
+
+                            <!-- Icono -->
+                            <span class="relative z-10 flex items-center justify-center w-6 h-6 text-white">
+                                <svg class="transition-transform duration-500 -rotate-45 group-hover:rotate-0"
+                                    fill="none" height="12" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="12"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12h14"></path>
+                                    <path d="m12 5 7 7-7 7"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <!-- Right Side Accordion -->
+                    <div class="w-full lg:w-2/3 flex flex-col gap-3">
+                        <!-- Active FAQ -->
+                        <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item is-active">
+                            <div class="flex justify-between items-center cursor-pointer faq-header">
+                                <h3 class="text-sm font-semibold text-gray-900 faq-title pr-4">¿Cuál es el costo
+                                    aproximado
+                                    de un proyecto "Terrazas Rooftop"?</h3>
+                                <button class="text-gray-500 shrink-0">
+                                    <svg class="faq-icon-plus hidden" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5v14"></path>
+                                    </svg>
+                                    <svg class="faq-icon-close block" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[1fr]">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                                        Cada proyecto es único y a medida. Es por eso que ofrecemos nuestro servicio a
+                                        partir de
+                                        USD 600 por metro cuadrado. El valor final depende de la superficie, el estado
+                                        actual de
+                                        la terraza y el nivel de equipamiento elegido. Ofrecemos un presupuesto
+                                        detallado y un
+                                        contrato "llave en mano" para garantizar un precio final sin sorpresas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Inactive FAQs -->
+                        <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item">
+                            <div class="flex justify-between items-center cursor-pointer faq-header">
+                                <h3 class="text-sm font-medium text-gray-900 faq-title pr-4">¿Necesito algún permiso de
+                                    obra
+                                    para esta transformación?</h3>
+                                <button class="text-gray-400 shrink-0">
+                                    <svg class="faq-icon-plus block" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5v14"></path>
+                                    </svg>
+                                    <svg class="faq-icon-close hidden" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                                        Depende de la envergadura del proyecto y las regulaciones locales. Nuestro
+                                        equipo de
+                                        arquitectos y profesionales se encarga de evaluar cada caso, gestionar la
+                                        documentación
+                                        necesaria y asegurar que toda la intervención cumpla con la normativa vigente.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item">
+                            <div class="flex justify-between items-center cursor-pointer faq-header">
+                                <h3 class="text-sm font-medium text-gray-900 faq-title pr-4">¿Qué opciones de pago y
+                                    financiación ofrecen?</h3>
+                                <button class="text-gray-400 shrink-0">
+                                    <svg class="faq-icon-plus block" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5v14"></path>
+                                    </svg>
+                                    <svg class="faq-icon-close hidden" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                                        Ofrecemos flexibilidad. Al ser una empresa legalmente constituida, emitimos
+                                        facturas A o
+                                        B y aceptamos pagos con tarjeta de crédito. También podemos generar links de
+                                        pago y
+                                        coordinar planes de financiación para adaptarnos a tus necesidades.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item">
+                            <div class="flex justify-between items-center cursor-pointer faq-header">
+                                <h3 class="text-sm font-medium text-gray-900 faq-title pr-4">¿Este tipo de obra
+                                    realmente
+                                    aumenta el valor de mi propiedad?</h3>
+                                <button class="text-gray-400 shrink-0">
+                                    <svg class="faq-icon-plus block" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5v14"></path>
+                                    </svg>
+                                    <svg class="faq-icon-close hidden" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                                        Definitivamente. Transformar una superficie ociosa en un área funcional y de
+                                        alta gama
+                                        como un rooftop es una de las inversiones que mayor valor agregado y retorno
+                                        genera en
+                                        el mercado inmobiliario actual. No solo ganás calidad de vida, también
+                                        incrementás el
+                                        valor de reventa o alquiler.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item">
+                            <div class="flex justify-between items-center cursor-pointer faq-header">
+                                <h3 class="text-sm font-medium text-gray-900 faq-title pr-4">¿Cualquier terraza es apta
+                                    para
+                                    este tipo de intervención?</h3>
+                                <button class="text-gray-400 shrink-0">
+                                    <svg class="faq-icon-plus block" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5v14"></path>
+                                    </svg>
+                                    <svg class="faq-icon-close hidden" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                                        La mayoría de las terrazas planas tienen un gran potencial. El primer paso de
+                                        nuestro
+                                        proceso es siempre una visita técnica sin cargo para evaluar la estructura
+                                        existente, el
+                                        estado de la impermeabilización y las posibilidades de diseño. La seguridad
+                                        estructural
+                                        es nuestra máxima prioridad.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item">
+                            <div class="flex justify-between items-center cursor-pointer faq-header">
+                                <h3 class="text-sm font-medium text-gray-900 faq-title pr-4">¿Qué incluye exactamente el
+                                    servicio "llave en mano"?</h3>
+                                <button class="text-gray-400 shrink-0">
+                                    <svg class="faq-icon-plus block" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5v14"></path>
+                                    </svg>
+                                    <svg class="faq-icon-close hidden" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                                        Significa que nos encargamos absolutamente de todo. Desde el diseño inicial y el
+                                        proyecto ejecutivo, pasando por la compra de materiales y la construcción, hasta
+                                        la
+                                        limpieza final de obra. Tu única tarea es disfrutar de tu nuevo espacio.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item">
+                            <div class="flex justify-between items-center cursor-pointer faq-header">
+                                <h3 class="text-sm font-medium text-gray-900 faq-title pr-4">¿Qué tipo de tecnología y
+                                    equipamiento de alta gama puedo incluir?</h3>
+                                <button class="text-gray-400 shrink-0">
+                                    <svg class="faq-icon-plus block" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5v14"></path>
+                                    </svg>
+                                    <svg class="faq-icon-close hidden" fill="none" height="16" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                                        Nuestro objetivo es crear un oasis de confort y entretenimiento. Por eso,
+                                        integramos
+                                        tecnología de última generación, incluyendo sistemas de sonido envolvente,
+                                        pantallas y
+                                        proyectores para exteriores, hidromasajes de lujo, y piscinas tipo "espejo de
+                                        agua" con
+                                        climatización. Todo se diseña a medida para convertir tu terraza en un espacio
+                                        único.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const faqItems = document.querySelectorAll('.faq-item');
+
+                                faqItems.forEach(item => {
+                                    const header = item.querySelector('.faq-header');
+                                    header.addEventListener('click', () => {
+                                        faqItems.forEach(otherItem => {
+                                            if (otherItem !== item && otherItem.classList.contains('is-active')) {
+                                                otherItem.classList.remove('is-active');
+                                                const otherContent = otherItem.querySelector('.faq-content');
+                                                const otherTitle = otherItem.querySelector('.faq-title');
+                                                const otherPlus = otherItem.querySelector('.faq-icon-plus');
+                                                const otherClose = otherItem.querySelector('.faq-icon-close');
+
+                                                otherContent.classList.remove('grid-rows-[1fr]');
+                                                otherContent.classList.add('grid-rows-[0fr]');
+                                                otherTitle.classList.remove('font-semibold');
+                                                otherTitle.classList.add('font-medium');
+                                                otherPlus.classList.remove('hidden');
+                                                otherPlus.classList.add('block');
+                                                otherClose.classList.remove('block');
+                                                otherClose.classList.add('hidden');
+                                            }
+                                        });
+
+                                        item.classList.toggle('is-active');
+                                        const content = item.querySelector('.faq-content');
+                                        const title = item.querySelector('.faq-title');
+                                        const plus = item.querySelector('.faq-icon-plus');
+                                        const close = item.querySelector('.faq-icon-close');
+
+                                        if (item.classList.contains('is-active')) {
+                                            content.classList.remove('grid-rows-[0fr]');
+                                            content.classList.add('grid-rows-[1fr]');
+                                            title.classList.remove('font-medium');
+                                            title.classList.add('font-semibold');
+                                            plus.classList.remove('block');
+                                            plus.classList.add('hidden');
+                                            close.classList.remove('hidden');
+                                            close.classList.add('block');
+                                        } else {
+                                            content.classList.remove('grid-rows-[1fr]');
+                                            content.classList.add('grid-rows-[0fr]');
+                                            title.classList.remove('font-semibold');
+                                            title.classList.add('font-medium');
+                                            plus.classList.remove('hidden');
+                                            plus.classList.add('block');
+                                            close.classList.remove('block');
+                                            close.classList.add('hidden');
+                                        }
+                                    });
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </section>
+            <!-- END: FAQSection -->
+            <!-- BEGIN: ContactSection -->
+            <section class="py-24 lg:px-16 bg-[#13141A] text-white px-6" data-purpose="contact-section">
+                <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
+                    <!-- Left Contact Info -->
+                    <div class="w-full lg:w-1/2">
+                        <span
+                            class="inline-block border border-gray-700 text-gray-300 text-xs font-medium px-3 py-1 rounded-full mb-6">Contacto</span>
+                        <h2 class="lg:text-5xl font-semibold tracking-tight mb-6 leading-tight text-3xl">Hablemos de tu
+                            Proyecto.</h2>
+                        <p class="text-gray-400 mb-12 text-sm leading-relaxed max-w-md">
+                            Estamos listos para evaluar tu terraza y proponerte la mejor solución. Completá el
+                            formulario o
+                            contactanos para coordinar una visita técnica sin cargo.
+                        </p>
+                        <div class="space-y-6 text-sm">
+                            <div class="flex justify-between items-center border-b border-gray-800 pb-4">
+                                <span class="text-gray-400">Email</span>
+                                <span class="">info@terrazasrooftop.com.ar</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-gray-800 pb-4">
+                                <span class="text-gray-400">Teléfono</span>
+                                <span class="">+54 9 11 5951-6786</span>
+                            </div>
+                            <div class="pt-4">
+                                <span class="block text-gray-400 mb-3">Seguinos</span>
+                                <div class="flex gap-4">
+                                    <!-- Social Icons -->
+                                    <a class="text-gray-400 hover:text-white transition-colors" href="#">
+                                        <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                                        </svg>
+                                    </a>
+                                    <a class="text-gray-400 hover:text-white transition-colors" href="#">
+                                        <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="text-gray-400 hover:text-white transition-colors" href="#">
+                                        <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                                            <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Contact Form -->
+                    <div class="w-full lg:w-1/2">
+                        <div class="bg-white rounded-2xl p-8 lg:p-10 text-gray-900">
+                            <form action="#" class="space-y-5" method="POST">
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1"
+                                        for="nombre">Nombre*</label>
+                                    <input
+                                        class="w-full bg-gray-50 border border-gray-200 rounded-md py-3 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
+                                        id="nombre" name="nombre" placeholder="Mano De Melo" type="text" />
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1"
+                                        for="email">Email*</label>
+                                    <input
+                                        class="w-full bg-gray-50 border border-gray-200 rounded-md py-3 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
+                                        id="email" name="email" placeholder="info@terrazasrooftop.com" type="email" />
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1" for="telefono">Número
+                                        Celular</label>
+                                    <input
+                                        class="w-full bg-gray-50 border border-gray-200 rounded-md py-3 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
+                                        id="telefono" name="telefono" placeholder="+54 9 11 5951-6786" type="tel" />
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1"
+                                        for="mensaje">Mensaje*</label>
+                                    <textarea
+                                        class="w-full bg-gray-50 border border-gray-200 rounded-md py-3 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none"
+                                        id="mensaje" name="mensaje" placeholder="Hola, Quiero mas información."
+                                        rows="4"></textarea>
+                                </div>
+                                <button
+                                    class="w-full bg-[#444444] hover:bg-gray-800 text-white font-medium py-3 rounded-md text-sm transition-colors mt-2"
+                                    type="submit">
+                                    Enviar Mensaje
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END: ContactSection -->
+    </main>
+    <!-- BEGIN: MainFooter -->
+    <footer class="bg-[#0A0A0C] text-gray-400 py-12 px-8 lg:px-16 text-sm" data-purpose="site-footer">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-800 pb-12 mb-8">
+            <div class="mb-8 md:mb-0">
+                <span class="text-white text-lg font-semibold tracking-tight block mb-4">Terrazas Rooftop</span>
+                <div class="flex flex-col space-y-2">
+                    <a class="hover:text-white transition-colors" href="#">Nosotros</a>
+                    <a class="hover:text-white transition-colors" href="#">Proyectos</a>
+                    <a class="hover:text-white transition-colors" href="#">Servicios</a>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-2 text-right">
+                <a class="hover:text-white transition-colors" href="#">FAQs</a>
+                <a class="hover:text-white transition-colors" href="#">Contacto</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs">
+            <p class="">© 2026 Terrazas Rooftop. Todos los derechos reservados.</p>
+            <p class="mt-4 md:mt-0">Website design by <a href="https://wa.me/5493755626147" target="_blank"
+                    rel="noopener noreferrer" class="hover:text-white transition-colors">MISIONES VISION</a></p>
+        </div>
+    </footer>
+    <!-- END: MainFooter -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const hamburger = menuBtn.querySelector('.hamburger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                hamburger.classList.toggle('open');
+                mobileMenu.classList.toggle('translate-x-full');
+                mobileMenu.classList.toggle('translate-x-0');
+                document.body.classList.toggle('overflow-hidden');
+            }
+
+            menuBtn.addEventListener('click', toggleMenu);
+
+            // Close menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (hamburger.classList.contains('open')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Animate statistics numbers when in viewport
+            const stats = document.querySelectorAll('.stat-number');
+            const animateNumber = (el) => {
+                const originalText = el.getAttribute('data-target-text');
+                const match = originalText.match(/^([^\d]*)([\d\.]+)([^\d]*)$/);
+                if (!match) return;
+
+                const prefix = match[1];
+                const targetValue = parseFloat(match[2]);
+                const suffix = match[3];
+                const duration = 1500; // 1.5 seconds
+
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const easeProgress = 1 - Math.pow(2, -10 * progress); // easeOutExpo
+                    const currentValue = Math.floor(easeProgress * targetValue);
+
+                    el.textContent = `${prefix}${currentValue}${suffix}`;
+
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        el.textContent = originalText; // Ensure it ends exactly on the original string
+                    }
+                };
+                window.requestAnimationFrame(step);
+            };
+
+            const statsObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateNumber(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            stats.forEach(el => {
+                const text = el.textContent.trim();
+                el.setAttribute('data-target-text', text);
+                const match = text.match(/^([^\d]*)([\d\.]+)([^\d]*)$/);
+                if (match) {
+                    // Set initial value to 0 with prefix/suffix
+                    el.textContent = `${match[1]}0${match[3]}`;
+                }
+                statsObserver.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>
