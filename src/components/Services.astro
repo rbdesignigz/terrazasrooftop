@@ -1,3 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import proyCocina from '../assets/img/proy-cocina.avif';
+import proyDecks from '../assets/img/proy-decks.avif';
+import proyHidroia from '../assets/img/proy-hidroia.avif';
+import proyPergola from '../assets/img/proy-pergola.avif';
+import proyPanel from '../assets/img/proy-panel.avif';
+import proyTecno from '../assets/img/proy-tecno.avif';
+---
 <section id="servicios" class="pt-12 px-8 lg:px-16 bg-[#FAFAFA]" data-purpose="services-section">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
@@ -11,15 +20,15 @@
                 <div class="flex flex-col lg:flex-row gap-16 items-start">
                     <!-- Left Service Image -->
                     <div class="w-full lg:w-1/2">
-                        <img alt="Servicio de Cocina en Terraza" id="service-image"
+                        <Image alt="Servicio de Cocina en Terraza" id="service-image"
                             class="w-full rounded-lg shadow-md object-cover aspect-square transition-opacity duration-300 ease-in-out opacity-100"
-                            src="/img/proy-cocina.avif" />
+                            src={proyCocina} loading="lazy" />
                     </div>
                     <!-- Right Accordion List (Visual representation of state) -->
                     <div class="w-full lg:w-1/2 flex flex-col gap-2">
                         <!-- Active Accordion Item -->
                         <div class="border-b border-gray-200 accordion-item is-active"
-                            data-image="./img/proy-cocina.avif">
+                            data-image={proyCocina.src}>
                             <div class="flex justify-between items-center py-4 cursor-pointer accordion-header">
                                 <div class="flex items-center gap-4">
                                     <!-- Kitchen Icon -->
@@ -62,7 +71,7 @@
                             </div>
                         </div>
                         <!-- Inactive Accordion Items -->
-                        <div class="border-b border-gray-200 accordion-item" data-image="./img/proy-decks.avif">
+                        <div class="border-b border-gray-200 accordion-item" data-image={proyDecks.src}>
                             <div class="flex justify-between items-center py-5 cursor-pointer accordion-header">
                                 <div class="flex items-center gap-4">
                                     <svg class="text-gray-700" fill="none" height="24" stroke="currentColor"
@@ -103,7 +112,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="border-b border-gray-200 accordion-item" data-image="./img/proy-hidroia.avif">
+                        <div class="border-b border-gray-200 accordion-item" data-image={proyHidroia.src}>
                             <div class="flex justify-between items-center py-5 cursor-pointer accordion-header">
                                 <div class="flex items-center gap-4">
                                     <svg class="text-gray-700" fill="none" height="24" stroke="currentColor"
@@ -146,7 +155,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="border-b border-gray-200 accordion-item" data-image="./img/proy-pergola.avif">
+                        <div class="border-b border-gray-200 accordion-item" data-image={proyPergola.src}>
                             <div class="flex justify-between items-center py-5 cursor-pointer accordion-header">
                                 <div class="flex items-center gap-4">
                                     <svg class="text-gray-700" fill="none" height="24" stroke="currentColor"
@@ -188,7 +197,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="border-b border-gray-200 accordion-item" data-image="./img/proy-panel.avif">
+                        <div class="border-b border-gray-200 accordion-item" data-image={proyPanel.src}>
                             <div class="flex justify-between items-center py-5 cursor-pointer accordion-header">
                                 <div class="flex items-center gap-4">
                                     <svg class="text-gray-700" fill="none" height="24" stroke="currentColor"
@@ -236,7 +245,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="border-b border-gray-200 accordion-item" data-image="./img/proy-tecno.avif">
+                        <div class="border-b border-gray-200 accordion-item" data-image={proyTecno.src}>
                             <div class="flex justify-between items-center py-5 cursor-pointer accordion-header">
                                 <div class="flex items-center gap-4">
                                     <svg class="text-gray-700" fill="none" height="24" stroke="currentColor"
@@ -280,7 +289,7 @@
                         <script>
                             document.addEventListener('DOMContentLoaded', () => {
                                 const accordionItems = document.querySelectorAll('.accordion-item');
-                                const serviceImage = document.getElementById('service-image');
+                                const serviceImage = document.getElementById('service-image') as HTMLImageElement;
 
                                 accordionItems.forEach(item => {
                                     const header = item.querySelector('.accordion-header');
@@ -355,4 +364,3 @@
             </div>
         </section>
         <!-- BEGIN: StackedCardsSection (Project Showcase & Guarantee) -->
-        

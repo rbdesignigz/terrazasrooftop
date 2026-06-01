@@ -1,9 +1,13 @@
+---
+import { Image } from 'astro:assets';
+import portadaImg from '../assets/img/portada.avif';
+---
 <!-- BEGIN: HeroSection -->
         <!-- BEGIN: HeroSection -->
         <section class="relative w-full min-h-screen bg-dark-theme flex flex-col" data-purpose="hero-section">
             <!-- Background Image (Background on mobile, right side on desktop) -->
             <div class="absolute inset-0 w-full h-full lg:left-auto lg:w-1/2 z-0">
-                <img alt="Lujo Terraza al atardecer" class="w-full h-full object-cover" src="/img/portada.avif" />
+                <Image alt="Lujo Terraza al atardecer" class="w-full h-full object-cover" src={portadaImg} loading="eager" fetchpriority="high" />
 
                 <!-- Dark overlay for readability on mobile only -->
                 <div class="absolute inset-0 bg-black/60 lg:hidden"></div>

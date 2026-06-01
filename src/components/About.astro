@@ -1,3 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import slide01 from '../assets/img/slide01.avif';
+import slide02 from '../assets/img/slide02.avif';
+import slide03 from '../assets/img/slide03.avif';
+import slide04 from '../assets/img/slide04.avif';
+import slide05 from '../assets/img/slide05.avif';
+import slide06 from '../assets/img/slide06.avif';
+---
 <!-- BEGIN: AboutSection -->
         <section id="nosotros" class="py-24 lg:px-16 bg-white px-6" data-purpose="about-section">
             <div class="max-w-7xl mx-auto">
@@ -38,39 +47,39 @@
                         class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 hide-scrollbar">
                         <div
                             class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
-                            <img alt="Proyecto 1"
+                            <Image alt="Proyecto 1"
                                 class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
-                                src="/img/slide01.avif" />
+                                src={slide01} loading="lazy" />
                         </div>
                         <div
                             class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
-                            <img alt="Proyecto 2"
+                            <Image alt="Proyecto 2"
                                 class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
-                                src="/img/slide02.avif" />
+                                src={slide02} loading="lazy" />
                         </div>
                         <div
                             class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
-                            <img alt="Proyecto 3"
+                            <Image alt="Proyecto 3"
                                 class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
-                                src="/img/slide03.avif" />
+                                src={slide03} loading="lazy" />
                         </div>
                         <div
                             class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
-                            <img alt="Proyecto 4"
+                            <Image alt="Proyecto 4"
                                 class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
-                                src="/img/slide04.avif" />
+                                src={slide04} loading="lazy" />
                         </div>
                         <div
                             class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
-                            <img alt="Proyecto 5"
+                            <Image alt="Proyecto 5"
                                 class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
-                                src="/img/slide05.avif" />
+                                src={slide05} loading="lazy" />
                         </div>
                         <div
                             class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
-                            <img alt="Proyecto 6"
+                            <Image alt="Proyecto 6"
                                 class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
-                                src="/img/slide06.avif" />
+                                src={slide06} loading="lazy" />
                         </div>
                     </div>
 

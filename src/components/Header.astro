@@ -1,10 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import logoImg from '../assets/img/logo.png';
+---
 <!-- BEGIN: MainHeader -->
     <header
         class="fixed md:absolute top-0 left-0 w-full z-50 py-4 md:py-6 lg:px-16 flex justify-between items-center text-white px-6 bg-[#13141A]/60 backdrop-blur-md md:bg-transparent md:backdrop-blur-none border-b border-white/5 md:border-b-0"
         data-purpose="site-header">
         <a href="#"
             class="flex items-center gap-3 text-xl font-semibold tracking-tight z-50 hover:opacity-90 transition-opacity">
-            <img src="/img/logo.png" alt="Terrazas Rooftop Logo" class="h-8 w-auto" />
+            <Image src={logoImg} alt="Terrazas Rooftop Logo" class="h-8 w-auto" />
             Terrazas Rooftop
         </a>
         <!-- Desktop Nav -->
