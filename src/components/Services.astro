@@ -329,6 +329,8 @@ import proyTecno from '../assets/img/proy-tecno.avif';
                                                 serviceImage.classList.add('opacity-0');
 
                                                 setTimeout(() => {
+                                                    serviceImage.removeAttribute('srcset');
+                                                    serviceImage.removeAttribute('sizes');
                                                     serviceImage.src = newImageSrc;
                                                     serviceImage.onload = () => {
                                                         serviceImage.classList.remove('opacity-0');
