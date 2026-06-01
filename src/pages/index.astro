@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Stats from '../components/Stats.astro';
+import Services from '../components/Services.astro';
+import Projects from '../components/Projects.astro';
+import FAQs from '../components/FAQs.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout>
+    <Header />
+    <main>
+        <Hero />
+        <About />
+        <Stats />
+        <Services />
+        <Projects />
+        <FAQs />
+        <Contact />
+    </main>
+    <Footer />
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const hamburger = menuBtn.querySelector('.hamburger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                hamburger.classList.toggle('open');
+                mobileMenu.classList.toggle('translate-x-full');
+                mobileMenu.classList.toggle('translate-x-0');
+                document.body.classList.toggle('overflow-hidden');
+            }
+
+            menuBtn.addEventListener('click', toggleMenu);
+
+            // Close menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (hamburger.classList.contains('open')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Animate statistics numbers when in viewport
+            const stats = document.querySelectorAll('.stat-number');
+            const animateNumber = (el) => {
+                const originalText = el.getAttribute('data-target-text');
+                const match = originalText.match(/^([^\d]*)([\d\.]+)([^\d]*)$/);
+                if (!match) return;
+
+                const prefix = match[1];
+                const targetValue = parseFloat(match[2]);
+                const suffix = match[3];
+                const duration = 1500; // 1.5 seconds
+
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const easeProgress = 1 - Math.pow(2, -10 * progress); // easeOutExpo
+                    const currentValue = Math.floor(easeProgress * targetValue);
+
+                    el.textContent = `${prefix}${currentValue}${suffix}`;
+
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        el.textContent = originalText; // Ensure it ends exactly on the original string
+                    }
+                };
+                window.requestAnimationFrame(step);
+            };
+
+            const statsObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateNumber(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            stats.forEach(el => {
+                const text = el.textContent.trim();
+                el.setAttribute('data-target-text', text);
+                const match = text.match(/^([^\d]*)([\d\.]+)([^\d]*)$/);
+                if (match) {
+                    // Set initial value to 0 with prefix/suffix
+                    el.textContent = `${match[1]}0${match[3]}`;
+                }
+                statsObserver.observe(el);
+            });
+        });
+    </script>
+
+</Layout>

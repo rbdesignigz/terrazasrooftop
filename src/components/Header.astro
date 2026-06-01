@@ -1,0 +1,37 @@
+<!-- BEGIN: MainHeader -->
+    <header
+        class="fixed md:absolute top-0 left-0 w-full z-50 py-4 md:py-6 lg:px-16 flex justify-between items-center text-white px-6 bg-[#13141A]/60 backdrop-blur-md md:bg-transparent md:backdrop-blur-none border-b border-white/5 md:border-b-0"
+        data-purpose="site-header">
+        <a href="#"
+            class="flex items-center gap-3 text-xl font-semibold tracking-tight z-50 hover:opacity-90 transition-opacity">
+            <img src="/img/logo.png" alt="Terrazas Rooftop Logo" class="h-8 w-auto" />
+            Terrazas Rooftop
+        </a>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-8 text-sm font-medium">
+            <a class="hover:text-gray-300 transition-colors" href="#nosotros">Nosotros</a>
+            <a class="hover:text-gray-300 transition-colors" href="#servicios">Servicios</a>
+            <a class="hover:text-gray-300 transition-colors" href="#proyectos">Proyectos</a>
+            <a class="hover:text-gray-300 transition-colors" href="#faqs">FAQs</a>
+            <a class="hover:text-gray-300 transition-colors" href="#contacto">Contacto</a>
+        </nav>
+        <!-- Hamburger Button -->
+        <button id="menu-btn" class="md:hidden flex items-center p-2 z-50 focus:outline-none" aria-label="Menu">
+            <div class="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#13141A]/95 backdrop-blur-lg z-40 flex flex-col justify-center items-center space-y-8 text-xl font-medium text-white transition-all duration-300 translate-x-full md:hidden">
+        <a class="hover:text-gray-300 transition-colors mobile-link" href="#nosotros">Nosotros</a>
+        <a class="hover:text-gray-300 transition-colors mobile-link" href="#servicios">Servicios</a>
+        <a class="hover:text-gray-300 transition-colors mobile-link" href="#proyectos">Proyectos</a>
+        <a class="hover:text-gray-300 transition-colors mobile-link" href="#faqs">FAQs</a>
+        <a class="hover:text-gray-300 transition-colors mobile-link" href="#contacto">Contacto</a>
+    </div>
+    <!-- END: MainHeader -->
