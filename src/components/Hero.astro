@@ -1,60 +1,96 @@
 ---
-import { Image } from 'astro:assets';
-import portadaImg from '../assets/img/portada.avif';
+import { Image } from "astro:assets";
+import portadaImg from "../assets/img/portada.avif";
 ---
-<!-- BEGIN: HeroSection -->
-        <!-- BEGIN: HeroSection -->
-        <section class="relative w-full min-h-screen bg-dark-theme flex flex-col" data-purpose="hero-section">
-            <!-- Background Image (Background on mobile, right side on desktop) -->
-            <div class="absolute inset-0 w-full h-full lg:left-auto lg:w-1/2 z-0">
-                <Image alt="Lujo Terraza al atardecer" class="w-full h-full object-cover" src={portadaImg} loading="eager" fetchpriority="high" format="avif" widths={[400, 800, 1920]} sizes="(max-width: 1024px) 100vw, 50vw" />
 
-                <!-- Dark overlay for readability on mobile only -->
-                <div class="absolute inset-0 bg-black/60 lg:hidden"></div>
+<!-- BEGIN: HeroSection --><!-- BEGIN: HeroSection -->
+<section
+    class="relative w-full min-h-[100dvh] lg:min-h-screen bg-dark-theme flex flex-col"
+    data-purpose="hero-section"
+>
+    <!-- Background Image (Background on mobile, right side on desktop) -->
+    <div class="absolute inset-0 w-full h-full lg:left-auto lg:w-1/2 z-0">
+        <Image
+            alt="Lujo Terraza al atardecer"
+            class="w-full h-full object-cover"
+            src={portadaImg}
+            loading="eager"
+            fetchpriority="high"
+            format="avif"
+            widths={[400, 800, 1920]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+        />
 
-                <!-- Info Box -->
-                <div
-                    class="absolute bottom-8 right-6 lg:bottom-12 lg:right-12 bg-black/60 backdrop-blur-md text-white p-4 max-w-[240px] rounded-lg border border-white/10 text-xs z-20">
-                    <p>Más del 60% de las terrazas planas en áreas urbanas están funcionalmente desaprovechadas o sin
-                        uso.</p>
-                </div>
-            </div>
+        <!-- Dark overlay for readability on mobile only -->
+        <div class="absolute inset-0 bg-black/60 lg:hidden"></div>
 
-            <!-- Text Content -->
-            <div
-                class="relative z-10 w-full mt-20 flex-grow flex flex-col justify-center px-6 lg:px-16 pt-12 pb-12 lg:py-32 text-white lg:w-1/2">
-                <h1 class="text-4xl lg:text-7xl font-semibold leading-tight tracking-tight mb-8 max-w-xl">
-                    Transformamos Espacios en Oasis Urbanos
-                </h1>
-                <p class="text-gray-400 mt-4 lg:mt-8 text-base lg:text-lg mb-8 max-w-md">
-                    Transformamos terrazas vacías en espacios recreativos de alta calidad, combinando diseño, tecnología
-                    y materiales premium.
-                </p>
-                <div>
-                    <a class="relative mt-8 inline-flex items-center gap-4 bg-[#222222] border border-gray-700 px-6 py-3 rounded-full text-sm font-medium overflow-hidden group transition-all duration-300"
-                        href="https://wa.me/5491159516786?text=Hola,%20quisiera%20cotizar%20un%20proyecto"
-                        target="_blank" rel="noopener noreferrer">
-                        <!-- Círculo que se expande -->
-                        <span
-                            class="absolute right-6 top-1/2 -translate-y-1/2 w-6 h-6 bg-white rounded-full transition-transform duration-500 ease-out group-hover:scale-[30] z-0 origin-center"></span>
+        <!-- Info Box -->
+        <div
+            class="absolute bottom-10 right-6 lg:bottom-12 lg:right-12 bg-black/60 backdrop-blur-md text-white p-4 max-w-[240px] rounded-lg border border-white/10 text-xs z-20"
+        >
+            <p>
+                Más del 60% de las terrazas planas en áreas urbanas están
+                funcionalmente desaprovechadas o sin uso.
+            </p>
+        </div>
+    </div>
 
-                        <!-- Texto -->
-                        <span
-                            class="relative z-10 text-white group-hover:text-black transition-colors duration-300 font-semibold">
-                            Cotizar sin costo
-                        </span>
+    <!-- Text Content -->
+    <div
+        class="relative z-10 w-full flex-grow flex flex-col justify-center px-6 lg:px-16 pt-12 pb-12 lg:py-32 text-white lg:w-1/2"
+    >
+        <h1
+            class="text-4xl lg:text-7xl font-semibold leading-tight tracking-tight mb-8 max-w-xl"
+        >
+            Transformamos Espacios en Oasis Urbanos
+        </h1>
+        <p
+            class="text-gray-400 mt-4 lg:mt-8 text-base lg:text-lg mb-8 max-w-md"
+        >
+            Transformamos terrazas vacías en espacios recreativos de alta
+            calidad, combinando diseño, tecnología y materiales premium.
+        </p>
+        <div>
+            <a
+                class="relative mt-8 inline-flex items-center gap-4 bg-[#222222] border border-gray-700 px-6 py-3 rounded-full text-sm font-medium overflow-hidden group transition-all duration-300"
+                href="https://wa.me/5491159516786?text=Hola,%20quisiera%20cotizar%20un%20proyecto"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <!-- Círculo que se expande -->
+                <span
+                    class="absolute right-6 top-1/2 -translate-y-1/2 w-6 h-6 bg-white rounded-full transition-transform duration-500 ease-out group-hover:scale-[30] z-0 origin-center"
+                ></span>
 
-                        <!-- Icono -->
-                        <span class="relative z-10 flex items-center justify-center w-6 h-6 text-black">
-                            <svg class="transition-transform duration-500 -rotate-45 group-hover:rotate-0" fill="none"
-                                height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12h14"></path>
-                                <path d="m12 5 7 7-7 7"></path>
-                            </svg>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- END: HeroSection -->
+                <!-- Texto -->
+                <span
+                    class="relative z-10 text-white group-hover:text-black transition-colors duration-300 font-semibold"
+                >
+                    Cotizar sin costo
+                </span>
+
+                <!-- Icono -->
+                <span
+                    class="relative z-10 flex items-center justify-center w-6 h-6 text-black"
+                >
+                    <svg
+                        class="transition-transform duration-500 -rotate-45 group-hover:rotate-0"
+                        fill="none"
+                        height="16"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- END: HeroSection -->
