@@ -196,49 +196,13 @@ import newSlide04 from "../assets/img/new-slide04.avif";
                 </div>
             </div>
 
-            <!-- Mobile Dots Indicator -->
-            <div
-                class="flex justify-center gap-2 mt-4 md:hidden"
-                id="slider-dots"
-            >
-                <button
-                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-800 transition-all duration-300 dot-btn"
-                    aria-label="Go to slide 1"></button>
-                <button
-                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                    aria-label="Go to slide 2"></button>
-                <button
-                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                    aria-label="Go to slide 3"></button>
-                <button
-                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                    aria-label="Go to slide 4"></button>
-                <button
-                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                    aria-label="Go to slide 5"></button>
-                <button
-                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                    aria-label="Go to slide 6"></button>
-                <button
-                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                    aria-label="Go to slide 7"></button>
-                <button
-                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                    aria-label="Go to slide 8"></button>
-                <button
-                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                    aria-label="Go to slide 9"></button>
-                <button
-                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                    aria-label="Go to slide 10"></button>
-            </div>
+            <!-- Mobile Dots Indicator Removed -->
         </div>
 
         <!-- Auto-sliding Logic -->
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 const slider = document.getElementById("project-slider");
-                const dots = document.querySelectorAll(".dot-btn");
                 let items = document.querySelectorAll(".slider-item");
                 let currentIndex = 0;
                 let autoSlideInterval;
@@ -252,25 +216,13 @@ import newSlide04 from "../assets/img/new-slide04.avif";
                 });
                 items = document.querySelectorAll(".slider-item");
 
-                const updateDots = (index) => {
-                    const normalizedIndex = index % originalItemsCount;
-                    dots.forEach((dot, i) => {
-                        if (i === normalizedIndex) {
-                            dot.classList.remove("bg-gray-300");
-                            dot.classList.add("bg-gray-800");
-                        } else {
-                            dot.classList.remove("bg-gray-800");
-                            dot.classList.add("bg-gray-300");
-                        }
-                    });
-                };
+                // Dots update logic removed
 
                 const scrollToSlide = (index) => {
                     if (!items[index]) return;
                     const scrollLeft =
                         items[index].offsetLeft - slider.offsetLeft;
                     slider.scrollTo({ left: scrollLeft, behavior: "smooth" });
-                    updateDots(index);
                 };
 
                 const nextSlide = () => {
@@ -325,13 +277,7 @@ import newSlide04 from "../assets/img/new-slide04.avif";
                     startAutoSlide();
                 });
 
-                dots.forEach((dot, i) => {
-                    dot.addEventListener("click", () => {
-                        currentIndex = i;
-                        scrollToSlide(currentIndex);
-                        startAutoSlide();
-                    });
-                });
+                // Dots click listeners removed
 
                 slider.addEventListener("scroll", () => {
                     if (window.innerWidth >= 1024) return;
@@ -344,7 +290,6 @@ import newSlide04 from "../assets/img/new-slide04.avif";
                         newIndex < items.length
                     ) {
                         currentIndex = newIndex;
-                        updateDots(currentIndex);
                     }
                 });
 
