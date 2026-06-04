@@ -4,7 +4,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
     background-color: #FAFAFA;
     /* Light background for most sections */
     color: #111827;
@@ -45,4 +45,48 @@ body {
 
 .hamburger-btn.open span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Scroll Reveal Animation */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Entrance Animations */
+@keyframes hero-image {
+    from {
+        transform: scale(1.05);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-hero-image {
+    animation: hero-image 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes hero-text {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-hero-text {
+    opacity: 0;
+    animation: hero-text 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }

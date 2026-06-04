@@ -12,7 +12,7 @@ import portadaImg from "../assets/img/portada.avif";
     <div class="absolute inset-0 w-full h-full lg:left-auto lg:w-1/2 z-0">
         <Image
             alt="Lujo Terraza al atardecer"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover animate-hero-image"
             src={portadaImg}
             loading="eager"
             fetchpriority="high"
@@ -26,7 +26,8 @@ import portadaImg from "../assets/img/portada.avif";
 
         <!-- Info Box -->
         <div
-            class="absolute bottom-10 right-6 lg:bottom-12 lg:right-12 bg-black/60 backdrop-blur-md text-white p-4 max-w-[240px] rounded-lg border border-white/10 text-xs z-20"
+            class="absolute bottom-10 right-6 lg:bottom-12 lg:right-12 bg-black/60 backdrop-blur-md text-white p-4 max-w-[240px] rounded-lg border border-white/10 text-xs z-20 animate-hero-text"
+            style="animation-delay: 600ms;"
         >
             <p>
                 Más del 60% de las terrazas planas en áreas urbanas están
@@ -40,17 +41,15 @@ import portadaImg from "../assets/img/portada.avif";
         class="relative z-10 w-full flex-grow flex flex-col justify-center px-6 lg:px-16 pt-12 pb-12 lg:py-32 text-white lg:w-1/2"
     >
         <h1
-            class="text-4xl lg:text-7xl font-semibold leading-tight tracking-tight mb-8 max-w-xl"
+            class="text-4xl lg:text-7xl font-semibold leading-tight tracking-tight mb-8 max-w-xl animate-hero-text"
         >
             Transformamos Espacios en Oasis Urbanos
         </h1>
-        <p
-            class="text-gray-400 mt-4 lg:mt-8 text-base lg:text-lg mb-8 max-w-md"
-        >
+        <p class="text-gray-100 mt-4 lg:mt-8 text-lg lg:text-lg mb-8 max-w-md animate-hero-text" style="animation-delay: 200ms;">
             Transformamos terrazas vacías en espacios recreativos de alta
             calidad, combinando diseño, tecnología y materiales premium.
         </p>
-        <div>
+        <div class="animate-hero-text" style="animation-delay: 400ms;">
             <a
                 class="relative mt-8 inline-flex items-center gap-4 bg-[#222222] border border-gray-700 px-6 py-3 rounded-full text-sm font-medium overflow-hidden group transition-all duration-300"
                 href="https://wa.me/5491159516786?text=Hola,%20quisiera%20cotizar%20un%20proyecto"

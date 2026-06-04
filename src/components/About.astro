@@ -1,256 +1,425 @@
 ---
-import { Image } from 'astro:assets';
-import slide01 from '../assets/img/slide01.avif';
-import slide02 from '../assets/img/slide02.avif';
-import slide03 from '../assets/img/slide03.avif';
-import slide04 from '../assets/img/slide04.avif';
-import slide05 from '../assets/img/slide05.avif';
-import slide06 from '../assets/img/slide06.avif';
+import { Image } from "astro:assets";
+import slide01 from "../assets/img/slide01.avif";
+import slide02 from "../assets/img/slide02.avif";
+import slide03 from "../assets/img/slide03.avif";
+import slide04 from "../assets/img/slide04.avif";
+import slide05 from "../assets/img/slide05.avif";
+import slide06 from "../assets/img/slide06.avif";
+import newSlide01 from "../assets/img/new-slide01.avif";
+import newSlide02 from "../assets/img/new-slide02.avif";
+import newSlide03 from "../assets/img/new-slide03.avif";
+import newSlide04 from "../assets/img/new-slide04.avif";
 ---
+
 <!-- BEGIN: AboutSection -->
-        <section id="nosotros" class="py-24 lg:px-16 bg-white px-6" data-purpose="about-section">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col mb-16 max-w-4xl">
-                    <div class="mb-8">
-                        <span
-                            class="inline-block bg-[#222222] text-white text-sm font-medium px-4 py-1.5 rounded-full mb-6">Acerca
-                            de Nosotros</span>
-                        <h2 class="text-4xl lg:text-6xl  tracking-tight text-gray-900 leading-[1.1] font-normal">
-                            Ingeniería estructural<br class="hidden md:block" /> de vanguardia.
-                        </h2>
-                    </div>
-                    <div>
-                        <p class="text-gray-600 text-lg lg:text-xl leading-relaxed">
-                            Somos una empresa con más de 20 años de experiencia diseñando y ejecutando obras a medida.
-                            Nuestro compromiso es ofrecer un servicio integral y personalizado, abarcando desde el
-                            diseño hasta la ejecución completa del proyecto. <br />
-                            Con "TERRAZAS ROOFTOP", volcamos toda nuestra trayectoria para transformar espacios sin uso
-                            en activos valiosos, garantizando no solo un diseño excepcional, sino una construcción de
-                            máxima calidad y durabilidad.
-                        </p>
-                    </div>
+<section
+    id="nosotros"
+    class="py-24 lg:px-16 bg-white px-6"
+    data-purpose="about-section"
+>
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col mb-16 max-w-4xl">
+            <div class="mb-8 scroll-reveal">
+                <span
+                    class="inline-block bg-[#222222] text-white text-sm font-medium px-4 py-1.5 rounded-full mb-6"
+                    >Acerca de Nosotros</span
+                >
+                <h2
+                    class="text-4xl lg:text-6xl tracking-tight text-gray-900 leading-[1.1] font-normal"
+                >
+                    Ingeniería estructural<br class="hidden md:block" /> de vanguardia.
+                </h2>
+            </div>
+            <div class="scroll-reveal">
+                <p class="text-gray-600 text-lg lg:text-xl leading-relaxed">
+                    Somos una empresa con más de 20 años de experiencia
+                    diseñando y ejecutando obras a medida. Nuestro compromiso es
+                    ofrecer un servicio integral y personalizado, abarcando
+                    desde el diseño hasta la ejecución completa del proyecto. <br
+                    />
+                    Con "TERRAZAS ROOFTOP", volcamos toda nuestra trayectoria para
+                    transformar espacios sin uso en activos valiosos, garantizando
+                    no solo un diseño excepcional, sino una construcción de máxima
+                    calidad y durabilidad.
+                </p>
+            </div>
+        </div>
+        <!-- Image Slider -->
+        <div
+            class="relative w-full lg:w-[100vw] lg:relative lg:left-1/2 lg:-translate-x-1/2 mt-12 scroll-reveal"
+            id="gallery-container"
+        >
+            <style>
+                .hide-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .hide-scrollbar {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+            </style>
+            <div
+                id="project-slider"
+                class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 hide-scrollbar"
+            >
+                <div
+                    class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item"
+                >
+                    <Image
+                        alt="Proyecto 1"
+                        class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                        src={slide01}
+                        loading="lazy"
+                        format="avif"
+                        widths={[300, 600, 1000]}
+                        sizes="(max-width: 768px) 80vw, 20vw"
+                    />
                 </div>
-                <!-- Image Slider -->
-                <div class="relative w-full lg:w-[100vw] lg:relative lg:left-1/2 lg:-translate-x-1/2 mt-12"
-                    id="gallery-container">
-                    <style>
-                        .hide-scrollbar::-webkit-scrollbar {
-                            display: none;
-                        }
-
-                        .hide-scrollbar {
-                            -ms-overflow-style: none;
-                            scrollbar-width: none;
-                        }
-                    </style>
-                    <div id="project-slider"
-                        class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 hide-scrollbar">
-                        <div
-                            class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
-                            <Image alt="Proyecto 1"
-                                class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
-                                src={slide01} loading="lazy" format="avif" widths={[300, 600, 1000]} sizes="(max-width: 768px) 80vw, 20vw" />
-                        </div>
-                        <div
-                            class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
-                            <Image alt="Proyecto 2"
-                                class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
-                                src={slide02} loading="lazy" format="avif" widths={[300, 600, 1000]} sizes="(max-width: 768px) 80vw, 20vw" />
-                        </div>
-                        <div
-                            class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
-                            <Image alt="Proyecto 3"
-                                class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
-                                src={slide03} loading="lazy" format="avif" widths={[300, 600, 1000]} sizes="(max-width: 768px) 80vw, 20vw" />
-                        </div>
-                        <div
-                            class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
-                            <Image alt="Proyecto 4"
-                                class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
-                                src={slide04} loading="lazy" format="avif" widths={[300, 600, 1000]} sizes="(max-width: 768px) 80vw, 20vw" />
-                        </div>
-                        <div
-                            class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
-                            <Image alt="Proyecto 5"
-                                class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
-                                src={slide05} loading="lazy" format="avif" widths={[300, 600, 1000]} sizes="(max-width: 768px) 80vw, 20vw" />
-                        </div>
-                        <div
-                            class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item">
-                            <Image alt="Proyecto 6"
-                                class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
-                                src={slide06} loading="lazy" format="avif" widths={[300, 600, 1000]} sizes="(max-width: 768px) 80vw, 20vw" />
-                        </div>
-                    </div>
-
-                    <!-- Mobile Dots Indicator -->
-                    <div class="flex justify-center gap-2 mt-4 md:hidden" id="slider-dots">
-                        <button class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-800 transition-all duration-300 dot-btn"
-                            aria-label="Go to slide 1"></button>
-                        <button class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                            aria-label="Go to slide 2"></button>
-                        <button class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                            aria-label="Go to slide 3"></button>
-                        <button class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                            aria-label="Go to slide 4"></button>
-                        <button class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                            aria-label="Go to slide 5"></button>
-                        <button class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
-                            aria-label="Go to slide 6"></button>
-                    </div>
+                <div
+                    class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item"
+                >
+                    <Image
+                        alt="Proyecto 2"
+                        class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                        src={slide02}
+                        loading="lazy"
+                        format="avif"
+                        widths={[300, 600, 1000]}
+                        sizes="(max-width: 768px) 80vw, 20vw"
+                    />
                 </div>
+                <div
+                    class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item"
+                >
+                    <Image
+                        alt="Proyecto 3"
+                        class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                        src={slide03}
+                        loading="lazy"
+                        format="avif"
+                        widths={[300, 600, 1000]}
+                        sizes="(max-width: 768px) 80vw, 20vw"
+                    />
+                </div>
+                <div
+                    class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item"
+                >
+                    <Image
+                        alt="Proyecto 4"
+                        class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                        src={slide04}
+                        loading="lazy"
+                        format="avif"
+                        widths={[300, 600, 1000]}
+                        sizes="(max-width: 768px) 80vw, 20vw"
+                    />
+                </div>
+                <div
+                    class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item"
+                >
+                    <Image
+                        alt="Proyecto 5"
+                        class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                        src={slide05}
+                        loading="lazy"
+                        format="avif"
+                        widths={[300, 600, 1000]}
+                        sizes="(max-width: 768px) 80vw, 20vw"
+                    />
+                </div>
+                <div
+                    class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item"
+                >
+                    <Image
+                        alt="Proyecto 6"
+                        class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                        src={slide06}
+                        loading="lazy"
+                        format="avif"
+                        widths={[300, 600, 1000]}
+                        sizes="(max-width: 768px) 80vw, 20vw"
+                    />
+                </div>
+                <div
+                    class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item"
+                >
+                    <Image
+                        alt="Proyecto 7"
+                        class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                        src={newSlide01}
+                        loading="lazy"
+                        format="avif"
+                        widths={[300, 600, 1000]}
+                        sizes="(max-width: 768px) 80vw, 20vw"
+                    />
+                </div>
+                <div
+                    class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item"
+                >
+                    <Image
+                        alt="Proyecto 8"
+                        class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                        src={newSlide02}
+                        loading="lazy"
+                        format="avif"
+                        widths={[300, 600, 1000]}
+                        sizes="(max-width: 768px) 80vw, 20vw"
+                    />
+                </div>
+                <div
+                    class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item"
+                >
+                    <Image
+                        alt="Proyecto 9"
+                        class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                        src={newSlide03}
+                        loading="lazy"
+                        format="avif"
+                        widths={[300, 600, 1000]}
+                        sizes="(max-width: 768px) 80vw, 20vw"
+                    />
+                </div>
+                <div
+                    class="snap-center h-[500px] lg:h-[650px] shrink-0 w-[80%] md:w-[45%] lg:w-[20%] rounded-xl overflow-hidden shadow-lg slider-item"
+                >
+                    <Image
+                        alt="Proyecto 10"
+                        class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 hover:scale-105"
+                        src={newSlide04}
+                        loading="lazy"
+                        format="avif"
+                        widths={[300, 600, 1000]}
+                        sizes="(max-width: 768px) 80vw, 20vw"
+                    />
+                </div>
+            </div>
 
-                <!-- Auto-sliding Logic -->
-                <script>
-                    document.addEventListener('DOMContentLoaded', () => {
-                        const slider = document.getElementById('project-slider');
-                        const dots = document.querySelectorAll('.dot-btn');
-                        let items = document.querySelectorAll('.slider-item');
-                        let currentIndex = 0;
-                        let autoSlideInterval;
-                        let animationFrameId;
+            <!-- Mobile Dots Indicator -->
+            <div
+                class="flex justify-center gap-2 mt-4 md:hidden"
+                id="slider-dots"
+            >
+                <button
+                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-800 transition-all duration-300 dot-btn"
+                    aria-label="Go to slide 1"></button>
+                <button
+                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                    aria-label="Go to slide 2"></button>
+                <button
+                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                    aria-label="Go to slide 3"></button>
+                <button
+                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                    aria-label="Go to slide 4"></button>
+                <button
+                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                    aria-label="Go to slide 5"></button>
+                <button
+                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                    aria-label="Go to slide 6"></button>
+                <button
+                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                    aria-label="Go to slide 7"></button>
+                <button
+                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                    aria-label="Go to slide 8"></button>
+                <button
+                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                    aria-label="Go to slide 9"></button>
+                <button
+                    class="w-[10px] h-[10px] p-[19px] box-content bg-clip-content rounded-full bg-gray-300 transition-all duration-300 dot-btn"
+                    aria-label="Go to slide 10"></button>
+            </div>
+        </div>
 
-                        // Clone items for infinite scroll
-                        const originalItemsCount = items.length;
-                        items.forEach(item => {
-                            const clone = item.cloneNode(true);
-                            slider.appendChild(clone);
-                        });
-                        items = document.querySelectorAll('.slider-item');
+        <!-- Auto-sliding Logic -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const slider = document.getElementById("project-slider");
+                const dots = document.querySelectorAll(".dot-btn");
+                let items = document.querySelectorAll(".slider-item");
+                let currentIndex = 0;
+                let autoSlideInterval;
+                let animationFrameId;
 
-                        const updateDots = (index) => {
-                            const normalizedIndex = index % originalItemsCount;
-                            dots.forEach((dot, i) => {
-                                if (i === normalizedIndex) {
-                                    dot.classList.remove('bg-gray-300');
-                                    dot.classList.add('bg-gray-800');
-                                } else {
-                                    dot.classList.remove('bg-gray-800');
-                                    dot.classList.add('bg-gray-300');
+                // Clone items for infinite scroll
+                const originalItemsCount = items.length;
+                items.forEach((item) => {
+                    const clone = item.cloneNode(true);
+                    slider.appendChild(clone);
+                });
+                items = document.querySelectorAll(".slider-item");
+
+                const updateDots = (index) => {
+                    const normalizedIndex = index % originalItemsCount;
+                    dots.forEach((dot, i) => {
+                        if (i === normalizedIndex) {
+                            dot.classList.remove("bg-gray-300");
+                            dot.classList.add("bg-gray-800");
+                        } else {
+                            dot.classList.remove("bg-gray-800");
+                            dot.classList.add("bg-gray-300");
+                        }
+                    });
+                };
+
+                const scrollToSlide = (index) => {
+                    if (!items[index]) return;
+                    const scrollLeft =
+                        items[index].offsetLeft - slider.offsetLeft;
+                    slider.scrollTo({ left: scrollLeft, behavior: "smooth" });
+                    updateDots(index);
+                };
+
+                const nextSlide = () => {
+                    currentIndex++;
+                    if (currentIndex >= items.length) {
+                        currentIndex = 0;
+                        slider.scrollTo({ left: 0, behavior: "instant" });
+                        return;
+                    }
+                    scrollToSlide(currentIndex);
+                };
+
+                const startAutoSlide = () => {
+                    stopAutoSlide();
+                    if (window.innerWidth >= 1024) {
+                        slider.classList.remove(
+                            "snap-mandatory",
+                            "snap-x",
+                            "scroll-smooth",
+                        );
+                        const playScroll = () => {
+                            if (!isDown) {
+                                slider.scrollLeft += 1;
+                                const resetPoint =
+                                    items[originalItemsCount].offsetLeft -
+                                    slider.offsetLeft;
+                                if (slider.scrollLeft >= resetPoint) {
+                                    slider.scrollLeft -= resetPoint;
                                 }
-                            });
-                        };
-
-                        const scrollToSlide = (index) => {
-                            if (!items[index]) return;
-                            const scrollLeft = items[index].offsetLeft - slider.offsetLeft;
-                            slider.scrollTo({ left: scrollLeft, behavior: 'smooth' });
-                            updateDots(index);
-                        };
-
-                        const nextSlide = () => {
-                            currentIndex++;
-                            if (currentIndex >= items.length) {
-                                currentIndex = 0;
-                                slider.scrollTo({ left: 0, behavior: 'instant' });
-                                return;
                             }
-                            scrollToSlide(currentIndex);
+                            animationFrameId =
+                                requestAnimationFrame(playScroll);
                         };
+                        animationFrameId = requestAnimationFrame(playScroll);
+                    } else {
+                        slider.classList.add(
+                            "snap-mandatory",
+                            "snap-x",
+                            "scroll-smooth",
+                        );
+                        autoSlideInterval = setInterval(nextSlide, 3500);
+                    }
+                };
 
-                        const startAutoSlide = () => {
-                            stopAutoSlide();
-                            if (window.innerWidth >= 1024) {
-                                slider.classList.remove('snap-mandatory', 'snap-x', 'scroll-smooth');
-                                const playScroll = () => {
-                                    if (!isDown) {
-                                        slider.scrollLeft += 1;
-                                        const resetPoint = items[originalItemsCount].offsetLeft - slider.offsetLeft;
-                                        if (slider.scrollLeft >= resetPoint) {
-                                            slider.scrollLeft -= resetPoint;
-                                        }
-                                    }
-                                    animationFrameId = requestAnimationFrame(playScroll);
-                                };
-                                animationFrameId = requestAnimationFrame(playScroll);
-                            } else {
-                                slider.classList.add('snap-mandatory', 'snap-x', 'scroll-smooth');
-                                autoSlideInterval = setInterval(nextSlide, 3500);
-                            }
-                        };
+                const stopAutoSlide = () => {
+                    if (autoSlideInterval) clearInterval(autoSlideInterval);
+                    if (animationFrameId)
+                        cancelAnimationFrame(animationFrameId);
+                };
 
-                        const stopAutoSlide = () => {
-                            if (autoSlideInterval) clearInterval(autoSlideInterval);
-                            if (animationFrameId) cancelAnimationFrame(animationFrameId);
-                        };
+                window.addEventListener("resize", () => {
+                    startAutoSlide();
+                });
 
-                        window.addEventListener('resize', () => {
-                            startAutoSlide();
-                        });
-
-                        dots.forEach((dot, i) => {
-                            dot.addEventListener('click', () => {
-                                currentIndex = i;
-                                scrollToSlide(currentIndex);
-                                startAutoSlide();
-                            });
-                        });
-
-                        slider.addEventListener('scroll', () => {
-                            if (window.innerWidth >= 1024) return;
-                            const scrollPosition = slider.scrollLeft;
-                            const itemWidth = items[0].offsetWidth + 16;
-                            const newIndex = Math.round(scrollPosition / itemWidth);
-                            if (newIndex !== currentIndex && newIndex >= 0 && newIndex < items.length) {
-                                currentIndex = newIndex;
-                                updateDots(currentIndex);
-                            }
-                        });
-
-                        let isDown = false;
-                        let startX;
-                        let scrollLeft;
-
-                        slider.style.cursor = 'grab';
-
-                        slider.addEventListener('mousedown', (e) => {
-                            isDown = true;
-                            slider.style.cursor = 'grabbing';
-                            slider.classList.remove('scroll-smooth', 'snap-x', 'snap-mandatory');
-                            startX = e.pageX - slider.offsetLeft;
-                            scrollLeft = slider.scrollLeft;
-                            stopAutoSlide();
-                        });
-
-                        slider.addEventListener('mouseleave', () => {
-                            if (isDown) {
-                                isDown = false;
-                                slider.style.cursor = 'grab';
-                                if (window.innerWidth < 1024) {
-                                    slider.classList.add('scroll-smooth', 'snap-x', 'snap-mandatory');
-                                }
-                            }
-                            startAutoSlide();
-                        });
-
-                        slider.addEventListener('mouseup', () => {
-                            isDown = false;
-                            slider.style.cursor = 'grab';
-                            if (window.innerWidth < 1024) {
-                                slider.classList.add('scroll-smooth', 'snap-x', 'snap-mandatory');
-                            }
-                            startAutoSlide();
-                        });
-
-                        slider.addEventListener('mousemove', (e) => {
-                            if (!isDown) return;
-                            e.preventDefault();
-                            const x = e.pageX - slider.offsetLeft;
-                            const walk = (x - startX) * 2;
-                            slider.scrollLeft = scrollLeft - walk;
-                        });
-
-                        const images = slider.querySelectorAll('img');
-                        images.forEach(img => {
-                            img.addEventListener('dragstart', (e) => e.preventDefault());
-                        });
-
-                        slider.addEventListener('touchstart', stopAutoSlide, { passive: true });
-                        slider.addEventListener('touchend', startAutoSlide, { passive: true });
-
+                dots.forEach((dot, i) => {
+                    dot.addEventListener("click", () => {
+                        currentIndex = i;
+                        scrollToSlide(currentIndex);
                         startAutoSlide();
                     });
-                </script>
-            </div>
-        </section>
-        <!-- END: AboutSection -->
+                });
+
+                slider.addEventListener("scroll", () => {
+                    if (window.innerWidth >= 1024) return;
+                    const scrollPosition = slider.scrollLeft;
+                    const itemWidth = items[0].offsetWidth + 16;
+                    const newIndex = Math.round(scrollPosition / itemWidth);
+                    if (
+                        newIndex !== currentIndex &&
+                        newIndex >= 0 &&
+                        newIndex < items.length
+                    ) {
+                        currentIndex = newIndex;
+                        updateDots(currentIndex);
+                    }
+                });
+
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+                slider.style.cursor = "grab";
+
+                slider.addEventListener("mousedown", (e) => {
+                    isDown = true;
+                    slider.style.cursor = "grabbing";
+                    slider.classList.remove(
+                        "scroll-smooth",
+                        "snap-x",
+                        "snap-mandatory",
+                    );
+                    startX = e.pageX - slider.offsetLeft;
+                    scrollLeft = slider.scrollLeft;
+                    stopAutoSlide();
+                });
+
+                slider.addEventListener("mouseleave", () => {
+                    if (isDown) {
+                        isDown = false;
+                        slider.style.cursor = "grab";
+                        if (window.innerWidth < 1024) {
+                            slider.classList.add(
+                                "scroll-smooth",
+                                "snap-x",
+                                "snap-mandatory",
+                            );
+                        }
+                    }
+                    startAutoSlide();
+                });
+
+                slider.addEventListener("mouseup", () => {
+                    isDown = false;
+                    slider.style.cursor = "grab";
+                    if (window.innerWidth < 1024) {
+                        slider.classList.add(
+                            "scroll-smooth",
+                            "snap-x",
+                            "snap-mandatory",
+                        );
+                    }
+                    startAutoSlide();
+                });
+
+                slider.addEventListener("mousemove", (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - slider.offsetLeft;
+                    const walk = (x - startX) * 2;
+                    slider.scrollLeft = scrollLeft - walk;
+                });
+
+                const images = slider.querySelectorAll("img");
+                images.forEach((img) => {
+                    img.addEventListener("dragstart", (e) =>
+                        e.preventDefault(),
+                    );
+                });
+
+                slider.addEventListener("touchstart", stopAutoSlide, {
+                    passive: true,
+                });
+                slider.addEventListener("touchend", startAutoSlide, {
+                    passive: true,
+                });
+
+                startAutoSlide();
+            });
+        </script>
+    </div>
+</section>
+<!-- END: AboutSection -->

@@ -1,343 +1,588 @@
-<section id="faqs" class="py-24 lg:px-16 bg-white px-6" data-purpose="faq-section">
-            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
-                <!-- Left Side content -->
-                <div class="w-full lg:w-1/3">
-                    <span
-                        class="inline-block bg-black text-white text-xs font-semibold px-3 py-1 rounded-full mb-6">Preguntas
-                        Frecuentes</span>
-                    <h2 class="font-semibold tracking-tight text-gray-900 mb-4 leading-tight text-5xl">Resolvemos
-                        tus<br />dudas.</h2>
-                    <p class="text-gray-600 mb-8 text-xl">¿Tenés más consultas? Ponete en<br />contacto con nuestro
-                        equipo.</p>
-                    <a class="relative inline-flex items-center gap-3 bg-gray-100 border border-gray-200 px-5 py-2.5 rounded-full text-sm font-medium overflow-hidden group transition-all duration-300"
-                        href="https://wa.me/5491159516786?text=Hola,%20vengo%20de%20la%20pagina%20*Terrazas%20Rooftop*%20y%20tengo%20las%20siguientes%20dudas:"
-                        target="_blank" rel="noopener noreferrer">
-                        <!-- Círculo que se expande -->
-                        <span
-                            class="absolute right-[18px] top-1/2 -translate-y-1/2 w-7 h-7 bg-gray-900 rounded-full transition-transform duration-500 ease-out group-hover:scale-[30] z-0 origin-center"></span>
+<section
+    id="faqs"
+    class="py-24 lg:px-16 bg-white px-6"
+    data-purpose="faq-section"
+>
+    <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 scroll-reveal">
+        <!-- Left Side content -->
+        <div class="w-full lg:w-1/3">
+            <span
+                class="inline-block bg-black text-white text-xs font-semibold px-3 py-1 rounded-full mb-6"
+                >Preguntas Frecuentes</span
+            >
+            <h2
+                class="font-semibold tracking-tight text-gray-900 mb-4 leading-tight text-5xl"
+            >
+                Resolvemos tus<br />dudas.
+            </h2>
+            <p class="text-gray-600 mb-8 text-xl">
+                ¿Tenés más consultas? Ponete en<br />contacto con nuestro
+                equipo.
+            </p>
+            <a
+                class="relative inline-flex items-center gap-3 bg-gray-100 border border-gray-200 px-5 py-2.5 rounded-full text-sm font-medium overflow-hidden group transition-all duration-300"
+                href="https://wa.me/5491159516786?text=Hola,%20vengo%20de%20la%20pagina%20*Terrazas%20Rooftop*%20y%20tengo%20las%20siguientes%20dudas:"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <!-- Círculo que se expande -->
+                <span
+                    class="absolute right-[18px] top-1/2 -translate-y-1/2 w-7 h-7 bg-gray-900 rounded-full transition-transform duration-500 ease-out group-hover:scale-[30] z-0 origin-center"
+                ></span>
 
-                        <!-- Texto -->
-                        <span
-                            class="relative z-10 text-gray-900 group-hover:text-white transition-colors duration-300 font-semibold">
-                            Contactanos
-                        </span>
+                <!-- Texto -->
+                <span
+                    class="relative z-10 text-gray-900 group-hover:text-white transition-colors duration-300 font-semibold"
+                >
+                    Contactanos
+                </span>
 
-                        <!-- Icono -->
-                        <span class="relative z-10 flex items-center justify-center w-6 h-6 text-white">
-                            <svg class="transition-transform duration-500 -rotate-45 group-hover:rotate-0" fill="none"
-                                height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12h14"></path>
-                                <path d="m12 5 7 7-7 7"></path>
-                            </svg>
-                        </span>
-                    </a>
+                <!-- Icono -->
+                <span
+                    class="relative z-10 flex items-center justify-center w-6 h-6 text-white"
+                >
+                    <svg
+                        class="transition-transform duration-500 -rotate-45 group-hover:rotate-0"
+                        fill="none"
+                        height="12"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="12"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <!-- Right Side Accordion -->
+        <div class="w-full lg:w-2/3 flex flex-col gap-3">
+            <!-- Active FAQ -->
+            <div
+                class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item is-active"
+            >
+                <div
+                    class="flex justify-between items-center cursor-pointer faq-header"
+                >
+                    <h3
+                        class="text-sm font-semibold text-gray-900 faq-title pr-4"
+                    >
+                        ¿Cuál es el costo aproximado de un proyecto "Terrazas
+                        Rooftop"?
+                    </h3>
+                    <button
+                        aria-label="Alternar pregunta frecuente"
+                        class="text-gray-500 shrink-0"
+                    >
+                        <svg
+                            class="faq-icon-plus hidden"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        <svg
+                            class="faq-icon-close block"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
                 </div>
-                <!-- Right Side Accordion -->
-                <div class="w-full lg:w-2/3 flex flex-col gap-3">
-                    <!-- Active FAQ -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item is-active">
-                        <div class="flex justify-between items-center cursor-pointer faq-header">
-                            <h3 class="text-sm font-semibold text-gray-900 faq-title pr-4">¿Cuál es el costo
-                                aproximado
-                                de un proyecto "Terrazas Rooftop"?</h3>
-                            <button aria-label="Alternar pregunta frecuente" class="text-gray-500 shrink-0">
-                                <svg class="faq-icon-plus hidden" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5v14"></path>
-                                </svg>
-                                <svg class="faq-icon-close block" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 6 6 18"></path>
-                                    <path d="m6 6 12 12"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <div
-                            class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[1fr]">
-                            <div class="overflow-hidden">
-                                <p class="text-gray-600 text-sm leading-relaxed pt-4">
-                                    Cada proyecto es único y a medida. Es por eso que ofrecemos nuestro servicio a
-                                    partir de
-                                    USD 600 por metro cuadrado. El valor final depende de la superficie, el estado
-                                    actual de
-                                    la terraza y el nivel de equipamiento elegido. Ofrecemos un presupuesto
-                                    detallado y un
-                                    contrato "llave en mano" para garantizar un precio final sin sorpresas.
-                                </p>
-                            </div>
-                        </div>
+                <div
+                    class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[1fr]"
+                >
+                    <div class="overflow-hidden">
+                        <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                            Cada proyecto es único y a medida. Es por eso que
+                            ofrecemos nuestro servicio a partir de USD 600 por
+                            metro cuadrado. El valor final depende de la
+                            superficie, el estado actual de la terraza y el
+                            nivel de equipamiento elegido. Ofrecemos un
+                            presupuesto detallado y un contrato "llave en mano"
+                            para garantizar un precio final sin sorpresas.
+                        </p>
                     </div>
-
-                    <!-- Inactive FAQs -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item">
-                        <div class="flex justify-between items-center cursor-pointer faq-header">
-                            <h3 class="text-sm font-medium text-gray-900 faq-title pr-4">¿Necesito algún permiso de
-                                obra
-                                para esta transformación?</h3>
-                            <button aria-label="Alternar pregunta frecuente" class="text-gray-400 shrink-0">
-                                <svg class="faq-icon-plus block" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5v14"></path>
-                                </svg>
-                                <svg class="faq-icon-close hidden" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 6 6 18"></path>
-                                    <path d="m6 6 12 12"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <div
-                            class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
-                            <div class="overflow-hidden">
-                                <p class="text-gray-600 text-sm leading-relaxed pt-4">
-                                    Depende de la envergadura del proyecto y las regulaciones locales. Nuestro
-                                    equipo de
-                                    arquitectos y profesionales se encarga de evaluar cada caso, gestionar la
-                                    documentación
-                                    necesaria y asegurar que toda la intervención cumpla con la normativa vigente.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item">
-                        <div class="flex justify-between items-center cursor-pointer faq-header">
-                            <h3 class="text-sm font-medium text-gray-900 faq-title pr-4">¿Qué opciones de pago y
-                                financiación ofrecen?</h3>
-                            <button aria-label="Alternar pregunta frecuente" class="text-gray-400 shrink-0">
-                                <svg class="faq-icon-plus block" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5v14"></path>
-                                </svg>
-                                <svg class="faq-icon-close hidden" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 6 6 18"></path>
-                                    <path d="m6 6 12 12"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <div
-                            class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
-                            <div class="overflow-hidden">
-                                <p class="text-gray-600 text-sm leading-relaxed pt-4">
-                                    Ofrecemos flexibilidad. Al ser una empresa legalmente constituida, emitimos
-                                    facturas A o
-                                    B y aceptamos pagos con tarjeta de crédito. También podemos generar links de
-                                    pago y
-                                    coordinar planes de financiación para adaptarnos a tus necesidades.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item">
-                        <div class="flex justify-between items-center cursor-pointer faq-header">
-                            <h3 class="text-sm font-medium text-gray-900 faq-title pr-4">¿Este tipo de obra
-                                realmente
-                                aumenta el valor de mi propiedad?</h3>
-                            <button aria-label="Alternar pregunta frecuente" class="text-gray-400 shrink-0">
-                                <svg class="faq-icon-plus block" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5v14"></path>
-                                </svg>
-                                <svg class="faq-icon-close hidden" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 6 6 18"></path>
-                                    <path d="m6 6 12 12"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <div
-                            class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
-                            <div class="overflow-hidden">
-                                <p class="text-gray-600 text-sm leading-relaxed pt-4">
-                                    Definitivamente. Transformar una superficie ociosa en un área funcional y de
-                                    alta gama
-                                    como un rooftop es una de las inversiones que mayor valor agregado y retorno
-                                    genera en
-                                    el mercado inmobiliario actual. No solo ganás calidad de vida, también
-                                    incrementás el
-                                    valor de reventa o alquiler.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item">
-                        <div class="flex justify-between items-center cursor-pointer faq-header">
-                            <h3 class="text-sm font-medium text-gray-900 faq-title pr-4">¿Cualquier terraza es apta
-                                para
-                                este tipo de intervención?</h3>
-                            <button aria-label="Alternar pregunta frecuente" class="text-gray-400 shrink-0">
-                                <svg class="faq-icon-plus block" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5v14"></path>
-                                </svg>
-                                <svg class="faq-icon-close hidden" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 6 6 18"></path>
-                                    <path d="m6 6 12 12"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <div
-                            class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
-                            <div class="overflow-hidden">
-                                <p class="text-gray-600 text-sm leading-relaxed pt-4">
-                                    La mayoría de las terrazas planas tienen un gran potencial. El primer paso de
-                                    nuestro
-                                    proceso es siempre una visita técnica sin cargo para evaluar la estructura
-                                    existente, el
-                                    estado de la impermeabilización y las posibilidades de diseño. La seguridad
-                                    estructural
-                                    es nuestra máxima prioridad.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item">
-                        <div class="flex justify-between items-center cursor-pointer faq-header">
-                            <h3 class="text-sm font-medium text-gray-900 faq-title pr-4">¿Qué incluye exactamente el
-                                servicio "llave en mano"?</h3>
-                            <button aria-label="Alternar pregunta frecuente" class="text-gray-400 shrink-0">
-                                <svg class="faq-icon-plus block" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5v14"></path>
-                                </svg>
-                                <svg class="faq-icon-close hidden" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 6 6 18"></path>
-                                    <path d="m6 6 12 12"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <div
-                            class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
-                            <div class="overflow-hidden">
-                                <p class="text-gray-600 text-sm leading-relaxed pt-4">
-                                    Significa que nos encargamos absolutamente de todo. Desde el diseño inicial y el
-                                    proyecto ejecutivo, pasando por la compra de materiales y la construcción, hasta
-                                    la
-                                    limpieza final de obra. Tu única tarea es disfrutar de tu nuevo espacio.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item">
-                        <div class="flex justify-between items-center cursor-pointer faq-header">
-                            <h3 class="text-sm font-medium text-gray-900 faq-title pr-4">¿Qué tipo de tecnología y
-                                equipamiento de alta gama puedo incluir?</h3>
-                            <button aria-label="Alternar pregunta frecuente" class="text-gray-400 shrink-0">
-                                <svg class="faq-icon-plus block" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5v14"></path>
-                                </svg>
-                                <svg class="faq-icon-close hidden" fill="none" height="16" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
-                                    width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 6 6 18"></path>
-                                    <path d="m6 6 12 12"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <div
-                            class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]">
-                            <div class="overflow-hidden">
-                                <p class="text-gray-600 text-sm leading-relaxed pt-4">
-                                    Nuestro objetivo es crear un oasis de confort y entretenimiento. Por eso,
-                                    integramos
-                                    tecnología de última generación, incluyendo sistemas de sonido envolvente,
-                                    pantallas y
-                                    proyectores para exteriores, hidromasajes de lujo, y piscinas tipo "espejo de
-                                    agua" con
-                                    climatización. Todo se diseña a medida para convertir tu terraza en un espacio
-                                    único.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <script>
-                        document.addEventListener('DOMContentLoaded', () => {
-                            const faqItems = document.querySelectorAll('.faq-item');
-
-                            faqItems.forEach(item => {
-                                const header = item.querySelector('.faq-header');
-                                header.addEventListener('click', () => {
-                                    faqItems.forEach(otherItem => {
-                                        if (otherItem !== item && otherItem.classList.contains('is-active')) {
-                                            otherItem.classList.remove('is-active');
-                                            const otherContent = otherItem.querySelector('.faq-content');
-                                            const otherTitle = otherItem.querySelector('.faq-title');
-                                            const otherPlus = otherItem.querySelector('.faq-icon-plus');
-                                            const otherClose = otherItem.querySelector('.faq-icon-close');
-
-                                            otherContent.classList.remove('grid-rows-[1fr]');
-                                            otherContent.classList.add('grid-rows-[0fr]');
-                                            otherTitle.classList.remove('font-semibold');
-                                            otherTitle.classList.add('font-medium');
-                                            otherPlus.classList.remove('hidden');
-                                            otherPlus.classList.add('block');
-                                            otherClose.classList.remove('block');
-                                            otherClose.classList.add('hidden');
-                                        }
-                                    });
-
-                                    item.classList.toggle('is-active');
-                                    const content = item.querySelector('.faq-content');
-                                    const title = item.querySelector('.faq-title');
-                                    const plus = item.querySelector('.faq-icon-plus');
-                                    const close = item.querySelector('.faq-icon-close');
-
-                                    if (item.classList.contains('is-active')) {
-                                        content.classList.remove('grid-rows-[0fr]');
-                                        content.classList.add('grid-rows-[1fr]');
-                                        title.classList.remove('font-medium');
-                                        title.classList.add('font-semibold');
-                                        plus.classList.remove('block');
-                                        plus.classList.add('hidden');
-                                        close.classList.remove('hidden');
-                                        close.classList.add('block');
-                                    } else {
-                                        content.classList.remove('grid-rows-[1fr]');
-                                        content.classList.add('grid-rows-[0fr]');
-                                        title.classList.remove('font-semibold');
-                                        title.classList.add('font-medium');
-                                        plus.classList.remove('hidden');
-                                        plus.classList.add('block');
-                                        close.classList.remove('block');
-                                        close.classList.add('hidden');
-                                    }
-                                });
-                            });
-                        });
-                    </script>
                 </div>
             </div>
-        </section>
-        <!-- END: FAQSection -->
-        <!-- BEGIN: ContactSection -->
-        
+
+            <!-- Inactive FAQs -->
+            <div
+                class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item"
+            >
+                <div
+                    class="flex justify-between items-center cursor-pointer faq-header"
+                >
+                    <h3
+                        class="text-sm font-medium text-gray-900 faq-title pr-4"
+                    >
+                        ¿Necesito algún permiso de obra para esta
+                        transformación?
+                    </h3>
+                    <button
+                        aria-label="Alternar pregunta frecuente"
+                        class="text-gray-400 shrink-0"
+                    >
+                        <svg
+                            class="faq-icon-plus block"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        <svg
+                            class="faq-icon-close hidden"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div
+                    class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]"
+                >
+                    <div class="overflow-hidden">
+                        <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                            Depende de la envergadura del proyecto y las
+                            regulaciones locales. Nuestro equipo de arquitectos
+                            y profesionales se encarga de evaluar cada caso,
+                            gestionar la documentación necesaria y asegurar que
+                            toda la intervención cumpla con la normativa
+                            vigente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item"
+            >
+                <div
+                    class="flex justify-between items-center cursor-pointer faq-header"
+                >
+                    <h3
+                        class="text-sm font-medium text-gray-900 faq-title pr-4"
+                    >
+                        ¿Qué opciones de pago y financiación ofrecen?
+                    </h3>
+                    <button
+                        aria-label="Alternar pregunta frecuente"
+                        class="text-gray-400 shrink-0"
+                    >
+                        <svg
+                            class="faq-icon-plus block"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        <svg
+                            class="faq-icon-close hidden"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div
+                    class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]"
+                >
+                    <div class="overflow-hidden">
+                        <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                            Ofrecemos flexibilidad. Al ser una empresa
+                            legalmente constituida, emitimos facturas A o B y
+                            aceptamos pagos con tarjeta de crédito. También
+                            podemos con tarjetas coordinar planes de
+                            financiación para adaptarnos a tus necesidades.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item"
+            >
+                <div
+                    class="flex justify-between items-center cursor-pointer faq-header"
+                >
+                    <h3
+                        class="text-sm font-medium text-gray-900 faq-title pr-4"
+                    >
+                        ¿Este tipo de obra realmente aumenta el valor de mi
+                        propiedad?
+                    </h3>
+                    <button
+                        aria-label="Alternar pregunta frecuente"
+                        class="text-gray-400 shrink-0"
+                    >
+                        <svg
+                            class="faq-icon-plus block"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        <svg
+                            class="faq-icon-close hidden"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div
+                    class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]"
+                >
+                    <div class="overflow-hidden">
+                        <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                            Definitivamente. Transformar una superficie ociosa
+                            en un área funcional y de calidad como un rooftop es
+                            una de las inversiones que mayor valor agregado y
+                            retorno genera en el mercado inmobiliario actual. No
+                            solo ganás calidad de vida, también incrementás el
+                            valor de reventa o alquiler.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item"
+            >
+                <div
+                    class="flex justify-between items-center cursor-pointer faq-header"
+                >
+                    <h3
+                        class="text-sm font-medium text-gray-900 faq-title pr-4"
+                    >
+                        ¿Cualquier terraza es apta para este tipo de
+                        intervención?
+                    </h3>
+                    <button
+                        aria-label="Alternar pregunta frecuente"
+                        class="text-gray-400 shrink-0"
+                    >
+                        <svg
+                            class="faq-icon-plus block"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        <svg
+                            class="faq-icon-close hidden"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div
+                    class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]"
+                >
+                    <div class="overflow-hidden">
+                        <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                            La mayoría de las terrazas planas tienen un gran
+                            potencial. El primer paso de nuestro proceso es
+                            siempre una visita técnica sin cargo para evaluar la
+                            estructura existente, el estado de la
+                            impermeabilización y las posibilidades de diseño. La
+                            seguridad estructural es nuestra máxima prioridad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item"
+            >
+                <div
+                    class="flex justify-between items-center cursor-pointer faq-header"
+                >
+                    <h3
+                        class="text-sm font-medium text-gray-900 faq-title pr-4"
+                    >
+                        ¿Qué incluye exactamente el servicio "llave en mano"?
+                    </h3>
+                    <button
+                        aria-label="Alternar pregunta frecuente"
+                        class="text-gray-400 shrink-0"
+                    >
+                        <svg
+                            class="faq-icon-plus block"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        <svg
+                            class="faq-icon-close hidden"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div
+                    class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]"
+                >
+                    <div class="overflow-hidden">
+                        <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                            Significa que nos encargamos absolutamente de todo.
+                            Desde el diseño inicial y el proyecto ejecutivo,
+                            pasando por la compra de materiales y la
+                            construcción, hasta la limpieza final de obra. Tu
+                            única tarea es disfrutar de tu nuevo espacio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors faq-item"
+            >
+                <div
+                    class="flex justify-between items-center cursor-pointer faq-header"
+                >
+                    <h3
+                        class="text-sm font-medium text-gray-900 faq-title pr-4"
+                    >
+                        ¿Qué tipo de tecnología y equipamiento de alta gama
+                        puedo incluir?
+                    </h3>
+                    <button
+                        aria-label="Alternar pregunta frecuente"
+                        class="text-gray-400 shrink-0"
+                    >
+                        <svg
+                            class="faq-icon-plus block"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        <svg
+                            class="faq-icon-close hidden"
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewbox="0 0 24 24"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div
+                    class="faq-content grid transition-[grid-template-rows] duration-300 ease-in-out grid-rows-[0fr]"
+                >
+                    <div class="overflow-hidden">
+                        <p class="text-gray-600 text-sm leading-relaxed pt-4">
+                            Nuestro objetivo es crear un oasis de confort y
+                            entretenimiento. Por eso, integramos tecnología de
+                            última generación, donde podrás agregar sistemas de
+                            sonido envolvente, pantallas y proyectores para
+                            exteriores, hidromasajes, y piscinas tipo "espejo de
+                            agua" con climatización. Todo se diseña a medida
+                            para convertir tu terraza en un espacio único.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const faqItems = document.querySelectorAll(".faq-item");
+
+                    faqItems.forEach((item) => {
+                        const header = item.querySelector(".faq-header");
+                        header.addEventListener("click", () => {
+                            faqItems.forEach((otherItem) => {
+                                if (
+                                    otherItem !== item &&
+                                    otherItem.classList.contains("is-active")
+                                ) {
+                                    otherItem.classList.remove("is-active");
+                                    const otherContent =
+                                        otherItem.querySelector(".faq-content");
+                                    const otherTitle =
+                                        otherItem.querySelector(".faq-title");
+                                    const otherPlus =
+                                        otherItem.querySelector(
+                                            ".faq-icon-plus",
+                                        );
+                                    const otherClose =
+                                        otherItem.querySelector(
+                                            ".faq-icon-close",
+                                        );
+
+                                    otherContent.classList.remove(
+                                        "grid-rows-[1fr]",
+                                    );
+                                    otherContent.classList.add(
+                                        "grid-rows-[0fr]",
+                                    );
+                                    otherTitle.classList.remove(
+                                        "font-semibold",
+                                    );
+                                    otherTitle.classList.add("font-medium");
+                                    otherPlus.classList.remove("hidden");
+                                    otherPlus.classList.add("block");
+                                    otherClose.classList.remove("block");
+                                    otherClose.classList.add("hidden");
+                                }
+                            });
+
+                            item.classList.toggle("is-active");
+                            const content = item.querySelector(".faq-content");
+                            const title = item.querySelector(".faq-title");
+                            const plus = item.querySelector(".faq-icon-plus");
+                            const close = item.querySelector(".faq-icon-close");
+
+                            if (item.classList.contains("is-active")) {
+                                content.classList.remove("grid-rows-[0fr]");
+                                content.classList.add("grid-rows-[1fr]");
+                                title.classList.remove("font-medium");
+                                title.classList.add("font-semibold");
+                                plus.classList.remove("block");
+                                plus.classList.add("hidden");
+                                close.classList.remove("hidden");
+                                close.classList.add("block");
+                            } else {
+                                content.classList.remove("grid-rows-[1fr]");
+                                content.classList.add("grid-rows-[0fr]");
+                                title.classList.remove("font-semibold");
+                                title.classList.add("font-medium");
+                                plus.classList.remove("hidden");
+                                plus.classList.add("block");
+                                close.classList.remove("block");
+                                close.classList.add("hidden");
+                            }
+                        });
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</section>
+<!-- END: FAQSection -->
+<!-- BEGIN: ContactSection -->
