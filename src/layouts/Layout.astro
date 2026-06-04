@@ -1,54 +1,71 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 ---
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Terrazas Rooftop | Transformamos tu Terraza</title>
-    <meta name="description" content="Especialistas en transformar terrazas y espacios exteriores en oasis urbanos de alta gama. Diseños a medida, llave en mano, decks, pérgolas e hidromasajes." />
-    <link rel="icon" type="image/png" href="/img/favicon.png" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "name": "Terrazas Rooftop",
-      "description": "Especialistas en transformar terrazas y espacios exteriores en oasis urbanos de alta gama.",
-      "url": "https://terrazasrooftop.vercel.app/",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "AR"
-      }
-    }
-    </script>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
-</head>
-<body class="antialiased selection:bg-gray-800 selection:text-white overflow-x-hidden">
-    <slot />
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
-            });
 
-            const hiddenElements = document.querySelectorAll('.scroll-reveal');
-            hiddenElements.forEach((el) => observer.observe(el));
-        });
-    </script>
-</body>
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Terrazas Rooftop | Transformamos tu Terraza - Rooftop</title>
+        <meta
+            name="description"
+            content="TerrazasRooftop: Especialistas en transformar terrazas y espacios exteriores en oasis urbanos de calidad. Diseños a medida, llave en mano, decks, pérgolas, hidromasajes y mucho mas."
+        />
+        <link rel="icon" type="image/png" href="/img/favicon.png" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "HomeAndConstructionBusiness",
+                "name": "Terrazas Rooftop",
+                "description": "TerrazasRooftop: Especialistas en transformar terrazas y espacios exteriores en oasis urbanos de calidad.",
+                "url": "https://terrazasrooftop.com.ar/",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "AR"
+                }
+            }
+        </script>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link
+            crossorigin=""
+            href="https://fonts.gstatic.com"
+            rel="preconnect"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body
+        class="antialiased selection:bg-gray-800 selection:text-white overflow-x-hidden"
+    >
+        <slot />
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("is-visible");
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.1,
+                        rootMargin: "0px 0px -50px 0px",
+                    },
+                );
+
+                const hiddenElements =
+                    document.querySelectorAll(".scroll-reveal");
+                hiddenElements.forEach((el) => observer.observe(el));
+            });
+        </script>
+    </body>
 </html>
