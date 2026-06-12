@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://terrazasrooftop.com.ar/sitemap-index.xml

@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://terrazasrooftop.com.ar/');
 ---
 
 <!doctype html>
@@ -12,6 +14,7 @@ import "../styles/global.css";
             name="description"
             content="TerrazasRooftop: Especialistas en transformar terrazas y espacios exteriores en oasis urbanos. Diseños a medida, decks, pérgolas, hidromasajes y más."
         />
+        <link rel="canonical" href={canonicalURL} />
         <link rel="icon" type="image/png" href="/img/favicon.png" />
         <script type="application/ld+json">
             {
